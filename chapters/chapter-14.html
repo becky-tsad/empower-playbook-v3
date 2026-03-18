@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14: Training Modules — Empower Playbook</title>
+    <link rel="stylesheet" href="../styles/design-system.css">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress">
+    <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Mobile Header -->
+<div class="mobile-header">
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <span style="font-family: var(--font-heading); font-weight: 600; font-size: var(--text-sm);">Empower Playbook</span>
+    <span style="font-size: var(--text-xs); color: var(--text-muted);">Ch 14</span>
+</div>
+
+<!-- Sidebar Overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<div class="playbook-layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo"><img src="../images/euc-logo.png" alt="Empower Upper Cumberland"><div class="sidebar-logo-text">The <span>Playbook</span></div><div class="sidebar-subtitle">Rural Economic Mobility</div></a>
+            
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 1 — The Case</div>
+            <a href="chapter-1.html" class="nav-item"><span class="nav-number">1</span>A Different Model</a>
+            <a href="chapter-2.html" class="nav-item"><span class="nav-number">2</span>The Problem</a>
+            <a href="chapter-3.html" class="nav-item"><span class="nav-number">3</span>The Proof</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 2 — The Method</div>
+            <a href="chapter-4.html" class="nav-item"><span class="nav-number">4</span>Non-Negotiables</a>
+            <a href="chapter-5.html" class="nav-item"><span class="nav-number">5</span>Adaptable Components</a>
+            <a href="chapter-6.html" class="nav-item"><span class="nav-number">6</span>Employer Certification</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 3 — Implementation</div>
+            <a href="chapter-7.html" class="nav-item"><span class="nav-number">7</span>Phased Approach</a>
+            <a href="chapter-8.html" class="nav-item"><span class="nav-number">8</span>Building Your Team</a>
+            <a href="chapter-9.html" class="nav-item"><span class="nav-number">9</span>What Kills Programs</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 4 — Sustainability &amp; Scale</div>
+            <a href="chapter-10.html" class="nav-item"><span class="nav-number">10</span>Funding</a>
+            <a href="chapter-11.html" class="nav-item"><span class="nav-number">11</span>Adapting the Model</a>
+            <a href="chapter-12.html" class="nav-item"><span class="nav-number">12</span>Scaling Beyond</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 5 — Tools &amp; Resources</div>
+            <a href="chapter-13.html" class="nav-item"><span class="nav-number">13</span>The Toolkit</a>
+            <a href="chapter-14.html" class="nav-item"><span class="nav-number">14</span>Training Modules</a>
+            <a href="chapter-15.html" class="nav-item"><span class="nav-number">15</span>Case Studies</a>
+            <a href="chapter-16.html" class="nav-item"><span class="nav-number">16</span>FAQ</a>
+            <a href="chapter-17.html" class="nav-item"><span class="nav-number">17</span>Getting Started</a>
+        </div>
+    </aside>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+        <!-- CHAPTER HEADER -->
+        <header class="chapter-header">
+            <div class="chapter-meta">
+                <span class="chapter-part">Part 5 — Tools &amp; Resources</span>
+                <span class="chapter-number">Chapter 14 of 17</span>
+            </div>
+            <h1 class="chapter-title">Training Modules</h1>
+            <p class="chapter-subtitle">Available through the Empower Academy. No one touches a family's case until they've completed the required training.</p>
+            <div class="chapter-badges">
+                <span class="badge badge-audience">Program Managers</span>
+                <span class="badge badge-time">4 min read</span>
+            </div>
+        </header>
+
+        <!-- OPENING -->
+        <p class="lead">Available through the Empower Academy. No one touches a family's case until they've completed the required training.</p>
+
+        <!-- SECTION: Core Training Sequence -->
+        <h2 id="core-training">Core Training Sequence</h2>
+
+        <p>Training is not onboarding. It's methodology certification. Every staff member and partner must complete the relevant modules before engaging with participants.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Module</th>
+                    <th>Duration</th>
+                    <th>Audience</th>
+                    <th>Required?</th>
+                    <th>What It Covers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Empower Methodology Overview</strong></td>
+                    <td>2 hours</td>
+                    <td>All staff</td>
+                    <td>Yes</td>
+                    <td>The four Non-Negotiables, three-team architecture, poverty exit vs. poverty management, the evidence base</td>
+                </tr>
+                <tr>
+                    <td><strong>Benefits Cliff Navigation</strong></td>
+                    <td>4 hours</td>
+                    <td>Navigators, Lead Navigator</td>
+                    <td>Yes</td>
+                    <td>Cliff identification, calculator tools, transition sequencing, employer coordination during cliff crossings</td>
+                </tr>
+                <tr>
+                    <td><strong>Navigator Best Practices</strong></td>
+                    <td>6 hours</td>
+                    <td>Navigators</td>
+                    <td>Yes</td>
+                    <td>Relationship-based coordination, wraparound protocols, caseload management, problem-solving frameworks, when to escalate</td>
+                </tr>
+                <tr>
+                    <td><strong>Employer Certification Training</strong></td>
+                    <td>2 hours</td>
+                    <td>Employer Liaison</td>
+                    <td>Yes</td>
+                    <td>Certification requirements, Poverty IQ curriculum, wage subsidy administration, retention partnership protocols</td>
+                </tr>
+                <tr>
+                    <td><strong>Poverty IQ (for Employers)</strong></td>
+                    <td>1 hour</td>
+                    <td>Certified Employers</td>
+                    <td>Yes</td>
+                    <td>ALICE realities, benefits cliff effects on employees, why workers decline promotions, retention strategies</td>
+                </tr>
+                <tr>
+                    <td><strong>ALICE Orientation</strong></td>
+                    <td>30 min</td>
+                    <td>All partners</td>
+                    <td>Recommended</td>
+                    <td>Who ALICE families are, what they face, how to interact without assumptions</td>
+                </tr>
+                <tr>
+                    <td><strong>Data Dashboard Training</strong></td>
+                    <td>2 hours</td>
+                    <td>Project Coordinator, Navigators</td>
+                    <td>Yes</td>
+                    <td>System access, data entry protocols, report generation, real-time tracking, privacy/security requirements</td>
+                </tr>
+                <tr>
+                    <td><strong>Leadership Alignment Workshop</strong></td>
+                    <td>4 hours</td>
+                    <td>Leadership Team</td>
+                    <td>Recommended</td>
+                    <td>Shared vision development, decision frameworks, vision drift prevention, three-team coordination</td>
+                </tr>
+                <tr>
+                    <td><strong>Grant Writing for Empower</strong></td>
+                    <td>3 hours</td>
+                    <td>Grant Staff</td>
+                    <td>Recommended</td>
+                    <td>Funder segmentation, pipeline math, pitch framing by audience, common mistakes</td>
+                </tr>
+                <tr>
+                    <td><strong>SmartDollar / Financial Coaching</strong></td>
+                    <td>2 hours</td>
+                    <td>Navigators</td>
+                    <td>Yes (if using SmartDollar)</td>
+                    <td>Platform navigation, Baby Steps framework, engagement strategies, prosperity journal integration</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION: Ongoing Training Calendar -->
+        <h2 id="ongoing-training">Ongoing Training Calendar</h2>
+
+        <p>Initial certification is the beginning, not the end.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Frequency</th>
+                    <th>Training Activity</th>
+                    <th>Who</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Monthly</strong></td>
+                    <td>Navigator peer learning — case conferences, barrier solution sharing</td>
+                    <td>All navigators</td>
+                </tr>
+                <tr>
+                    <td><strong>Quarterly</strong></td>
+                    <td>Return to shared vision — methodology adherence check</td>
+                    <td>All staff</td>
+                </tr>
+                <tr>
+                    <td><strong>Quarterly</strong></td>
+                    <td>Benefits cliff policy updates — recalibrate for threshold changes</td>
+                    <td>Navigators, Lead Navigator</td>
+                </tr>
+                <tr>
+                    <td><strong>Semi-annually</strong></td>
+                    <td>Employer engagement refresher</td>
+                    <td>Employer Liaison, Program Director</td>
+                </tr>
+                <tr>
+                    <td><strong>Annually</strong></td>
+                    <td>Full methodology recertification</td>
+                    <td>All staff</td>
+                </tr>
+                <tr>
+                    <td><strong>As needed</strong></td>
+                    <td>New hire onboarding — full training sequence, not "shadow someone"</td>
+                    <td>New staff</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-green">
+            <div class="callout-title">Accessing Training</div>
+            <p>Contact The Poverty Solution for Empower Academy enrollment. becky@thepovertysolution.com</p>
+        </div>
+
+        <!-- CHAPTER NAVIGATION -->
+        <nav class="chapter-nav">
+            <a href="chapter-13.html">
+                <span class="nav-label">Previous</span>
+                <span class="nav-title">&larr; Ch 13: The Empower Toolkit</span>
+            </a>
+            <a href="chapter-15.html">
+                <span class="nav-label">Next</span>
+                <span class="nav-title">Ch 15: Case Studies &rarr;</span>
+            </a>
+        </nav>
+
+
+        <!-- CHAPTER FOOTER -->
+        <footer class="chapter-footer">
+            <div class="footer-logos">
+                <a href="../index.html" class="footer-logo-euc">
+                    <img src="../images/euc-logo.png" alt="Empower Upper Cumberland">
+                </a>
+                <span style="color: var(--border-strong); font-size: var(--text-xl); font-weight: 200;">|</span>
+                <span class="footer-logo-tps">
+                    <span class="tps-the">The</span>
+                    <span class="tps-poverty">Poverty</span>
+                    <span class="tps-solution">Solution</span>
+                </span>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- Scripts -->
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('visible');
+}
+
+// Active nav item
+document.querySelectorAll('.nav-item').forEach(item => {
+    if (item.href === window.location.href) {
+        item.classList.add('active');
+    }
+});
+</script>
+
+</body>
+</html>

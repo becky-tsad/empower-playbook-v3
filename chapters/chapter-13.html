@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 13: The Empower Toolkit — Empower Playbook</title>
+    <link rel="stylesheet" href="../styles/design-system.css">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress">
+    <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Mobile Header -->
+<div class="mobile-header">
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <span style="font-family: var(--font-heading); font-weight: 600; font-size: var(--text-sm);">Empower Playbook</span>
+    <span style="font-size: var(--text-xs); color: var(--text-muted);">Ch 13</span>
+</div>
+
+<!-- Sidebar Overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<div class="playbook-layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo"><img src="../images/euc-logo.png" alt="Empower Upper Cumberland"><div class="sidebar-logo-text">The <span>Playbook</span></div><div class="sidebar-subtitle">Rural Economic Mobility</div></a>
+            
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 1 — The Case</div>
+            <a href="chapter-1.html" class="nav-item"><span class="nav-number">1</span>A Different Model</a>
+            <a href="chapter-2.html" class="nav-item"><span class="nav-number">2</span>The Problem</a>
+            <a href="chapter-3.html" class="nav-item"><span class="nav-number">3</span>The Proof</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 2 — The Method</div>
+            <a href="chapter-4.html" class="nav-item"><span class="nav-number">4</span>Non-Negotiables</a>
+            <a href="chapter-5.html" class="nav-item"><span class="nav-number">5</span>Adaptable Components</a>
+            <a href="chapter-6.html" class="nav-item"><span class="nav-number">6</span>Employer Certification</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 3 — Implementation</div>
+            <a href="chapter-7.html" class="nav-item"><span class="nav-number">7</span>Phased Approach</a>
+            <a href="chapter-8.html" class="nav-item"><span class="nav-number">8</span>Building Your Team</a>
+            <a href="chapter-9.html" class="nav-item"><span class="nav-number">9</span>What Kills Programs</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 4 — Sustainability &amp; Scale</div>
+            <a href="chapter-10.html" class="nav-item"><span class="nav-number">10</span>Funding</a>
+            <a href="chapter-11.html" class="nav-item"><span class="nav-number">11</span>Adapting the Model</a>
+            <a href="chapter-12.html" class="nav-item"><span class="nav-number">12</span>Scaling Beyond</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 5 — Tools &amp; Resources</div>
+            <a href="chapter-13.html" class="nav-item"><span class="nav-number">13</span>The Toolkit</a>
+            <a href="chapter-14.html" class="nav-item"><span class="nav-number">14</span>Training Modules</a>
+            <a href="chapter-15.html" class="nav-item"><span class="nav-number">15</span>Case Studies</a>
+            <a href="chapter-16.html" class="nav-item"><span class="nav-number">16</span>FAQ</a>
+            <a href="chapter-17.html" class="nav-item"><span class="nav-number">17</span>Getting Started</a>
+        </div>
+    </aside>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+        <!-- CHAPTER HEADER -->
+        <header class="chapter-header">
+            <div class="chapter-meta">
+                <span class="chapter-part">Part 5 — Tools &amp; Resources</span>
+                <span class="chapter-number">Chapter 13 of 17</span>
+            </div>
+            <h1 class="chapter-title">The Empower Toolkit</h1>
+            <p class="chapter-subtitle">Everything you need to move from reading this playbook to implementing the model, organized by implementation phase.</p>
+            <div class="chapter-badges">
+                <span class="badge badge-audience">Program Managers</span>
+                <span class="badge badge-time">5 min read</span>
+            </div>
+        </header>
+
+        <!-- OPENING -->
+        <p class="lead">Everything you need to move from reading this playbook to implementing the model. These tools are organized by implementation phase.</p>
+
+        <!-- SECTION 13.1 -->
+        <div class="section-number">13.1</div>
+        <h2 id="section-1">Assessment Tools (Before You Start)</h2>
+
+        <p>Use these before committing to an Empower implementation. They determine whether your community is ready — and where you need to build capacity first.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool</th>
+                    <th>Purpose</th>
+                    <th>When to Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Community Readiness Assessment</strong></td>
+                    <td>Evaluates existing service infrastructure, employer landscape, political climate, and organizational capacity</td>
+                    <td>Before committing to implementation</td>
+                </tr>
+                <tr>
+                    <td><strong>Service Mapping Template</strong></td>
+                    <td>Catalogs every agency, program, and funding stream touching your target population — identifies duplications and gaps</td>
+                    <td>Phase 1, first month</td>
+                </tr>
+                <tr>
+                    <td><strong>Employer Landscape Analysis</strong></td>
+                    <td>Maps employers by sector, pay scale, benefits, growth potential, and openness to certification</td>
+                    <td>Phase 1, before launching employer program</td>
+                </tr>
+                <tr>
+                    <td><strong>Benefits Cliff Baseline Calculator</strong></td>
+                    <td>Assesses the severity of benefits cliffs in your state's specific policy environment</td>
+                    <td>Phase 1, informs navigator training priorities</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 13.2 -->
+        <div class="section-number">13.2</div>
+        <h2 id="section-2">Planning Tools (Phase 1)</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool</th>
+                    <th>Purpose</th>
+                    <th>When to Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Shared Vision Workshop Guide</strong></td>
+                    <td>Facilitates the alignment session with all partner organizations — produces the signed shared vision document</td>
+                    <td>Phase 1, first month</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 1 Master Checklist</strong></td>
+                    <td>Complete task list for foundation-building phase with success markers</td>
+                    <td>Phase 1, months 1–6</td>
+                </tr>
+                <tr>
+                    <td><strong>Partner Agreement Templates</strong></td>
+                    <td>Coordination agreements specifying roles, data sharing, meeting cadences, and accountability</td>
+                    <td>Phase 1, before enrollment begins</td>
+                </tr>
+                <tr>
+                    <td><strong>Job Description Templates</strong></td>
+                    <td>Templated descriptions for all four core roles + supporting roles, calibrated to Empower methodology requirements</td>
+                    <td>Phase 1, hiring period</td>
+                </tr>
+                <tr>
+                    <td><strong>Budget Framework</strong></td>
+                    <td>Scalable budget template at three implementation sizes: small pilot (50 families), medium (125), full (250+)</td>
+                    <td>Phase 1, funding planning</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 13.3 -->
+        <div class="section-number">13.3</div>
+        <h2 id="section-3">Implementation Tools (Phase 2–3)</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool</th>
+                    <th>Purpose</th>
+                    <th>When to Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Navigator Training Curriculum</strong></td>
+                    <td>Complete training sequence: methodology, benefits cliff tools, ALICE orientation, coordination protocols</td>
+                    <td>Phase 1 (training) through ongoing</td>
+                </tr>
+                <tr>
+                    <td><strong>Benefits Cliff Calculator Access</strong></td>
+                    <td>State-specific cliff modeling tool — or connection to the Beacon technology platform</td>
+                    <td>From first enrollment</td>
+                </tr>
+                <tr>
+                    <td><strong>Employer Certification Checklist</strong></td>
+                    <td>Step-by-step requirements and verification for certified employer status</td>
+                    <td>Phase 1–2, employer onboarding</td>
+                </tr>
+                <tr>
+                    <td><strong>Poverty IQ Training Materials</strong></td>
+                    <td>Employer-facing training on ALICE realities, benefits cliff effects, and retention strategies</td>
+                    <td>Phase 1–2, employer certification</td>
+                </tr>
+                <tr>
+                    <td><strong>Intake Assessment Template</strong></td>
+                    <td>Comprehensive family assessment covering income, benefits, employment, childcare, transportation, health coverage, housing</td>
+                    <td>Phase 2, first enrollment</td>
+                </tr>
+                <tr>
+                    <td><strong>Transition Planning Worksheet</strong></td>
+                    <td>Per-family benefits cliff transition plan — sequences income increases against benefit reductions</td>
+                    <td>Phase 2–3, active navigation</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 13.4 -->
+        <div class="section-number">13.4</div>
+        <h2 id="section-4">Data Tools</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool</th>
+                    <th>Purpose</th>
+                    <th>When to Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Dashboard Setup Guide</strong></td>
+                    <td>Technical requirements and configuration for unified tracking system</td>
+                    <td>Phase 1</td>
+                </tr>
+                <tr>
+                    <td><strong>Data Collection Templates</strong></td>
+                    <td>Standardized intake forms, progress tracking, and outcome documentation</td>
+                    <td>Phase 2 onward</td>
+                </tr>
+                <tr>
+                    <td><strong>Outcomes Reporting Framework</strong></td>
+                    <td>Defines what to measure, how to measure it, and how to report it for funders and leadership</td>
+                    <td>Phase 2 onward</td>
+                </tr>
+                <tr>
+                    <td><strong>ROI Calculation Methodology</strong></td>
+                    <td>Step-by-step guide to calculating return on investment using the Urban Institute-aligned approach</td>
+                    <td>Phase 3, outcomes documentation</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 13.5 -->
+        <div class="section-number">13.5</div>
+        <h2 id="section-5">Sustainability Tools</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool</th>
+                    <th>Purpose</th>
+                    <th>When to Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Grant Prospect Research Template</strong></td>
+                    <td>Framework for evaluating potential funders: fit, capacity, timeline, likelihood</td>
+                    <td>From Phase 1</td>
+                </tr>
+                <tr>
+                    <td><strong>Funder Pitch Deck Template</strong></td>
+                    <td>Customizable presentation framework for foundation meetings</td>
+                    <td>Active fundraising</td>
+                </tr>
+                <tr>
+                    <td><strong>ROI One-Pager Template</strong></td>
+                    <td>Single-page summary of outcomes for quick funder distribution</td>
+                    <td>Active fundraising</td>
+                </tr>
+                <tr>
+                    <td><strong>Success Story Collection Guide</strong></td>
+                    <td>Ethical storytelling protocols for gathering and using participant narratives</td>
+                    <td>Phase 2 onward</td>
+                </tr>
+                <tr>
+                    <td><strong>Funder Segmentation Matrix</strong></td>
+                    <td>Template for matching your data points to specific funder priorities (see Chapter 10)</td>
+                    <td>Active fundraising</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-green">
+            <div class="callout-title">Accessing These Tools</div>
+            <p>Contact The Poverty Solution at becky@thepovertysolution.com for toolkit access. Implementation partners receive the complete toolkit as part of the technical assistance package.</p>
+        </div>
+
+        <!-- CHAPTER NAVIGATION -->
+        <nav class="chapter-nav">
+            <a href="chapter-12.html">
+                <span class="nav-label">Previous</span>
+                <span class="nav-title">&larr; Ch 12: Scaling Beyond</span>
+            </a>
+            <a href="chapter-14.html">
+                <span class="nav-label">Next</span>
+                <span class="nav-title">Ch 14: Training Modules &rarr;</span>
+            </a>
+        </nav>
+
+
+        <!-- CHAPTER FOOTER -->
+        <footer class="chapter-footer">
+            <div class="footer-logos">
+                <a href="../index.html" class="footer-logo-euc">
+                    <img src="../images/euc-logo.png" alt="Empower Upper Cumberland">
+                </a>
+                <span style="color: var(--border-strong); font-size: var(--text-xl); font-weight: 200;">|</span>
+                <span class="footer-logo-tps">
+                    <span class="tps-the">The</span>
+                    <span class="tps-poverty">Poverty</span>
+                    <span class="tps-solution">Solution</span>
+                </span>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- Scripts -->
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('visible');
+}
+
+// Active nav item
+document.querySelectorAll('.nav-item').forEach(item => {
+    if (item.href === window.location.href) {
+        item.classList.add('active');
+    }
+});
+</script>
+
+</body>
+</html>

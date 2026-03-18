@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: The Problem We're Solving — Empower Playbook</title>
+    <link rel="stylesheet" href="../styles/design-system.css">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress">
+    <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Mobile Header -->
+<div class="mobile-header">
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <span style="font-family: var(--font-heading); font-weight: 600; font-size: var(--text-sm);">Empower Playbook</span>
+    <span style="font-size: var(--text-xs); color: var(--text-muted);">Ch 2</span>
+</div>
+
+<!-- Sidebar Overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<div class="playbook-layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo"><img src="../images/euc-logo.png" alt="Empower Upper Cumberland"><div class="sidebar-logo-text">The <span>Playbook</span></div><div class="sidebar-subtitle">Rural Economic Mobility</div></a>
+            
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 1 — The Case</div>
+            <a href="chapter-1.html" class="nav-item"><span class="nav-number">1</span>A Different Model</a>
+            <a href="chapter-2.html" class="nav-item"><span class="nav-number">2</span>The Problem</a>
+            <a href="chapter-3.html" class="nav-item"><span class="nav-number">3</span>The Proof</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 2 — The Method</div>
+            <a href="chapter-4.html" class="nav-item"><span class="nav-number">4</span>Non-Negotiables</a>
+            <a href="chapter-5.html" class="nav-item"><span class="nav-number">5</span>Adaptable Components</a>
+            <a href="chapter-6.html" class="nav-item"><span class="nav-number">6</span>Employer Certification</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 3 — Implementation</div>
+            <a href="chapter-7.html" class="nav-item"><span class="nav-number">7</span>Phased Approach</a>
+            <a href="chapter-8.html" class="nav-item"><span class="nav-number">8</span>Building Your Team</a>
+            <a href="chapter-9.html" class="nav-item"><span class="nav-number">9</span>What Kills Programs</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 4 — Sustainability &amp; Scale</div>
+            <a href="chapter-10.html" class="nav-item"><span class="nav-number">10</span>Funding</a>
+            <a href="chapter-11.html" class="nav-item"><span class="nav-number">11</span>Adapting the Model</a>
+            <a href="chapter-12.html" class="nav-item"><span class="nav-number">12</span>Scaling Beyond</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 5 — Tools &amp; Resources</div>
+            <a href="chapter-13.html" class="nav-item"><span class="nav-number">13</span>The Toolkit</a>
+            <a href="chapter-14.html" class="nav-item"><span class="nav-number">14</span>Training Modules</a>
+            <a href="chapter-15.html" class="nav-item"><span class="nav-number">15</span>Case Studies</a>
+            <a href="chapter-16.html" class="nav-item"><span class="nav-number">16</span>FAQ</a>
+            <a href="chapter-17.html" class="nav-item"><span class="nav-number">17</span>Getting Started</a>
+        </div>
+    </aside>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+        <!-- CHAPTER HEADER -->
+        <header class="chapter-header">
+            <div class="chapter-meta">
+                <span class="chapter-part">Part 1 — The Case</span>
+                <span class="chapter-number">Chapter 2 of 17</span>
+            </div>
+            <h1 class="chapter-title">The Problem We're Solving</h1>
+            <p class="chapter-subtitle">The system punishes effort. Three interconnected traps keep families in poverty — not because they aren't working hard enough, but because the system is designed to hold them in place.</p>
+            <div class="chapter-badges">
+                <span class="badge badge-audience">Executives</span>
+                <span class="badge badge-audience">Funders</span>
+                <span class="badge badge-audience">Program Managers</span>
+                <span class="badge badge-time">10 min read</span>
+            </div>
+        </header>
+
+        <!-- OPENING HOOK -->
+        <p class="lead">
+            The families we serve aren't in crisis. They're stuck. They work. Often multiple jobs. They're not unemployed. They're not homeless. By federal poverty measures, many aren't even "poor." But they can't get ahead. Year after year, they show up, put in the hours, and see no return on that effort. No wage growth. No career advancement. No documented pathway forward.
+        </p>
+
+        <div class="callout callout-dark">
+            <div class="callout-title">The Core Question</div>
+            <p>Why do working families stay poor despite doing everything right? Three interconnected traps — fragmented services, benefits cliffs, and wrong metrics — keep families locked in place. The Empower Method solves all three.</p>
+        </div>
+
+        <!-- WHO WE SERVE -->
+        <h2>Who We Serve: Stranded Talent</h2>
+
+        <h3>Stranded Talent: A Better Framework</h3>
+
+        <p>Stranded talent describes working families who are stuck — not broken. They fall into three categories:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Persistently Low-Wage</strong></td>
+                    <td>Full-time work that doesn't pay the bills. 40+ hours a week and still can't cover rent, childcare, and transportation.</td>
+                </tr>
+                <tr>
+                    <td><strong>Underemployed</strong></td>
+                    <td>Earning far less than their skills warrant. The CNA who could be an RN. The factory worker with management potential. Talent that goes untapped.</td>
+                </tr>
+                <tr>
+                    <td><strong>Stalled</strong></td>
+                    <td>Zero wage growth. Zero advancement. Same job, same pay, year after year — despite showing up and doing everything asked of them.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-blue">
+            <div class="callout-title">Research Finding</div>
+            <p>36 million U.S. workers are stuck in high-churn, low-pay jobs. <em>(Source: Burning Glass Institute/Multiverse, 2023)</em></p>
+        </div>
+
+        <h3>ALICE: The Economic Reality</h3>
+
+        <p>ALICE stands for Asset Limited, Income Constrained, Employed. These are working families who earn above the federal poverty line but can't afford the basics: housing, food, childcare, transportation.</p>
+
+        <div class="data-box">
+            <div class="data-box-title">The ALICE Reality in Tennessee</div>
+            <div class="data-grid">
+                <div class="data-stat">
+                    <div class="data-number">44%</div>
+                    <div class="data-label">Tennessee households below ALICE threshold</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">$74,796</div>
+                    <div class="data-label">What a TN family of 4 actually needs annually</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">2x</div>
+                    <div class="data-label">How that compares to the federal poverty line</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">69%</div>
+                    <div class="data-label">Empower families already employed at intake</div>
+                </div>
+            </div>
+        </div>
+
+        <p>The cruel irony: ALICE families earn too much to qualify for assistance — no SNAP, no housing vouchers, no Medicaid. But too little to survive independently.</p>
+
+        <p><em>(Source: United For ALICE, 2023 Tennessee Report)</em></p>
+
+        <h3>The Impossible Choices</h3>
+
+        <p>Every day, these families make decisions no one should have to make:</p>
+
+        <ul>
+            <li><strong>Car repair or rent?</strong> The car is how they get to work. The rent is how they keep a roof over their kids.</li>
+            <li><strong>Quality childcare or utilities?</strong> Both are required for employment.</li>
+            <li><strong>Fill the prescription or fill the tank?</strong> Health or transportation — pick one.</li>
+            <li><strong>Take the overtime or see the kids?</strong> More hours means more money but less parenting.</li>
+        </ul>
+
+        <p>These aren't bad choices. They're impossible ones — forced by a system that doesn't work for working families.</p>
+
+        <h3>Why This Framing Matters</h3>
+
+        <p>We don't do crisis rescue. We unlock stranded talent. These are families who need a path forward, not a handout. The Empower Method provides that path: one navigator who sees the whole picture, connects the dots, and walks with families toward livable-wage careers — and stays with them to make sure they keep those careers. Not just another month of survival.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">Early Results</div>
+            <p>58% of Empower UC participants increased their income, with 83 families reaching full self-sufficiency.</p>
+        </div>
+
+        <!-- SECTION 2.1 -->
+        <div class="section-number">2.1</div>
+        <h2 id="section-1">Fragmented Services = Fragmented Families</h2>
+
+        <p>Meet Sarah. Single mom. Two kids. Rural Tennessee. She works 32 hours a week at the local grocery store — that's all they offer. She gets SNAP, Medicaid for her kids, and a childcare subsidy. She's on a housing waitlist. She wants to work more, earn more, and get off benefits.</p>
+
+        <p>Here's what that actually looks like:</p>
+
+        <ul>
+            <li>She works with a SNAP caseworker at DHS — sees them every 6 months</li>
+            <li>She has a TennCare eligibility worker — different person, different office</li>
+            <li>Her childcare subsidy goes through a separate state agency</li>
+            <li>She attended a workforce center workshop once, but never went back</li>
+        </ul>
+
+        <p>None of these agencies talk to each other. Sarah tells her story five times to five different people. Each one sees a sliver of her life. No one sees the whole picture. No one owns her outcome.</p>
+
+        <h3>The Referral Treadmill</h3>
+
+        <p>In fragmented systems, "helping" means referring. The workforce center refers Sarah to a job training program. The training program refers her to an employer. The employer needs childcare documentation to set her schedule — back to DHS. DHS needs current income verification — back to the employer. Meanwhile, her childcare subsidy is contingent on her income, which changes when she starts work.</p>
+
+        <p>Sarah runs in circles. Meetings. Forms. Hold music. She's "being served" by five agencies and going absolutely nowhere.</p>
+
+        <blockquote>
+            <p>"Every agency counts their referrals. No one counts whether Sarah actually got a livable-wage career, kept it, and stayed off benefits."</p>
+        </blockquote>
+
+        <h3>Duplicate Programs, Competing for the Same Families</h3>
+
+        <p>In a 14-county region, three organizations run job readiness workshops. Two teach financial literacy. Four distribute food. They compete for the same grant dollars, serve the same families repeatedly, and duplicate each other's work — while critical gaps (benefits navigation, childcare coordination, career advancement) go completely untouched.</p>
+
+        <p>Nobody navigates benefits cliffs. Nobody coordinates healthcare transitions. Nobody walks with a family for 18 months.</p>
+
+        <div class="callout callout-blue">
+            <div class="callout-title">The Real Problem</div>
+            <p>The problem isn't too few services. It's zero coordination.</p>
+        </div>
+
+        <!-- SECTION 2.2 -->
+        <div class="section-number">2.2</div>
+        <h2 id="section-2">The Benefits Cliff Crisis</h2>
+
+        <p>This is the trap nobody talks about. The one that keeps working families poor by design.</p>
+
+        <div class="data-box">
+            <div class="data-box-title">The Benefits Cliff by the Numbers</div>
+            <div class="data-grid">
+                <div class="data-stat">
+                    <div class="data-number">3M+</div>
+                    <div class="data-label">Households facing benefits cliffs if income increases</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">51%</div>
+                    <div class="data-label">Median effective marginal tax rate for families with children above poverty</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">95%+</div>
+                    <div class="data-label">Marginal tax rate possible when Medicaid is lost</div>
+                </div>
+            </div>
+        </div>
+
+        <p>Earn more, keep less. The system punishes effort with invisible walls that block every step forward.</p>
+
+        <h3>How a $1 Raise Can Cost a Family $5,000</h3>
+
+        <p>Sarah's employer offers her a promotion: 40 hours a week, $2 more per hour. That's $4,160 more per year. She should take it.</p>
+
+        <p>She can't.</p>
+
+        <p>That raise pushes her over the childcare subsidy threshold. She loses $6,800 per year in childcare assistance. Net result: she's $2,640 <em>poorer</em> than before the raise.</p>
+
+        <blockquote>
+            <p>"This is why families decline promotions, why employers can't understand why talented workers quit, and why work doesn't lead to wealth."</p>
+        </blockquote>
+
+        <p>Earn a bit more and she loses SNAP. A bit more and her kids lose TennCare. Every cliff punishes her for working harder.</p>
+
+        <h3>The Benefits Cliff in Numbers</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Wages</th>
+                    <th>Benefits</th>
+                    <th>Total Resources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Before raise ($12.80/hr)</td>
+                    <td>$26,600</td>
+                    <td>$12,800</td>
+                    <td>$39,424</td>
+                </tr>
+                <tr>
+                    <td>After $2/hr raise (childcare lost)</td>
+                    <td>$30,800</td>
+                    <td>$6,000</td>
+                    <td>$36,784</td>
+                </tr>
+                <tr>
+                    <td>More hours (SNAP lost)</td>
+                    <td>$32,800</td>
+                    <td>$4,000</td>
+                    <td>$36,800</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Sarah needs to nearly double her income — from $26K to $54K+ — to get back to where she started. That $19,000+ gap is the wall. That's why families stay stuck. Traditional poverty programs never address this. Benefits cliff navigation does.</p>
+
+        <div class="callout callout-blue">
+            <div class="callout-title">Research Finding: Childcare Has the Steepest Cliffs</div>
+            <p>Childcare subsidies create the steepest cliff of any benefit program. Families lose $5,991 to $6,000+ annually at cliff points — often more than the raise that triggered the loss. This is why Empower UC navigators prioritize childcare mapping first.</p>
+        </div>
+
+        <h3>Why Employed Families Stay Trapped</h3>
+
+        <p>69% of families in the Empower program are already employed.</p>
+
+        <p>This is not an unemployment problem. These families work — often multiple jobs. They still can't get ahead because the system punishes every step forward. The problem isn't their effort. It's the policy architecture that traps them.</p>
+
+        <p>The employer perspective: 1 in 3 businesses report employees turning down promotions because a raise means losing benefits. The benefits cliff hurts employers too — they can't retain talent or move people into leadership roles.</p>
+
+        <h3>What Families Actually Need</h3>
+
+        <p>Sarah doesn't need another resume workshop. She needs a navigator who sits down with her and maps out:</p>
+
+        <ul>
+            <li>Exactly where her benefits cliffs are</li>
+            <li>How much she needs to earn to clear each one</li>
+            <li>A sequenced plan to cross the gap safely</li>
+            <li>An employer who understands the plan and won't accidentally push her off a cliff with a well-meaning raise</li>
+        </ul>
+
+        <div class="callout callout-green">
+            <div class="callout-title">The Missing Tool</div>
+            <p>Benefits cliff navigation is the one tool most poverty programs don't offer — and the single most important intervention for moving working families to self-sufficiency.</p>
+        </div>
+
+        <!-- SECTION 2.3 -->
+        <div class="section-number">2.3</div>
+        <h2 id="section-3">Poverty Management vs. Poverty Alleviation</h2>
+
+        <p>Most poverty programs are designed to manage poverty, not end it.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Poverty Management</th>
+                    <th>Poverty Alleviation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Measures</strong></td>
+                    <td>Activities (referrals made)</td>
+                    <td>Outcomes (income gained)</td>
+                </tr>
+                <tr>
+                    <td><strong>Program length</strong></td>
+                    <td>3-6 month cycles</td>
+                    <td>18-24 month commitments</td>
+                </tr>
+                <tr>
+                    <td><strong>Definition of success</strong></td>
+                    <td>Enrolled in services</td>
+                    <td>Self-sufficiency achieved</td>
+                </tr>
+                <tr>
+                    <td><strong>Caseload model</strong></td>
+                    <td>Rotating caseloads</td>
+                    <td>One navigator, full journey</td>
+                </tr>
+                <tr>
+                    <td><strong>Service model</strong></td>
+                    <td>Siloed services</td>
+                    <td>Coordinated services</td>
+                </tr>
+                <tr>
+                    <td><strong>Approach</strong></td>
+                    <td>Reactive (respond to crises)</td>
+                    <td>Proactive (prevent cliffs before they happen)</td>
+                </tr>
+                <tr>
+                    <td><strong>Cost efficiency</strong></td>
+                    <td>High cost per family, low ROI</td>
+                    <td>$2,052 per family, 4.4:1 ROI</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>The Self-Sufficiency Standard: ALICE</h3>
+
+        <p>Most programs use the Federal Poverty Level (FPL) as their benchmark. Earn above it and you're officially "not poor."</p>
+
+        <p>That standard is broken. FPL for a family of three is $24,860. In Tennessee, actual basic needs for that same family exceed $54,000. Programs measure success against a number that bears no relationship to actual survival.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">The Empower Standard</div>
+            <p>The Empower Method uses the ALICE threshold instead, targeting 225% of FPL — the point where families cross from barely surviving to genuinely stable. That's the real finish line. That's what economic mobility actually looks like.</p>
+        </div>
+
+        <!-- KEY TAKEAWAY -->
+        <div class="key-takeaway">
+            <div class="key-takeaway-label">Key Takeaway</div>
+            <p>The system traps families in three ways: <strong>Fragmentation</strong> — nobody owns the outcome. <strong>Benefits cliffs</strong> — hard work gets punished. <strong>Wrong metrics</strong> — programs count activities, not exits from poverty.</p>
+            <div class="highlight">The Empower Method solves all three. Empower UC has moved 152 families above the poverty line and achieved full self-sufficiency for 83 families in 18-24 months.</div>
+        </div>
+
+        <!-- FUNDER CLOSE -->
+        <div class="callout callout-dark">
+            <div class="callout-title">For Funders and Policymakers</div>
+            <p>These three traps — fragmentation, benefits cliffs, and wrong metrics — cost taxpayers more than solving them does. The status quo isn't free. It's expensive, it's failing, and it's measurably worse than what the Empower Method delivers. The proof follows.</p>
+        </div>
+
+        <!-- CHAPTER NAVIGATION -->
+        <nav class="chapter-nav">
+            <a href="chapter-1.html">
+                <span class="nav-label">Previous</span>
+                <span class="nav-title">&larr; Ch 1: A Different Model</span>
+            </a>
+            <a href="chapter-3.html">
+                <span class="nav-label">Next</span>
+                <span class="nav-title">Ch 3: The Proof &rarr;</span>
+            </a>
+        </nav>
+
+
+        <!-- CHAPTER FOOTER -->
+        <footer class="chapter-footer">
+            <div class="footer-logos">
+                <a href="../index.html" class="footer-logo-euc">
+                    <img src="../images/euc-logo.png" alt="Empower Upper Cumberland">
+                </a>
+                <span style="color: var(--border-strong); font-size: var(--text-xl); font-weight: 200;">|</span>
+                <span class="footer-logo-tps">
+                    <span class="tps-the">The</span>
+                    <span class="tps-poverty">Poverty</span>
+                    <span class="tps-solution">Solution</span>
+                </span>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- Scripts -->
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('visible');
+}
+
+// Active nav item
+document.querySelectorAll('.nav-item').forEach(item => {
+    if (item.href === window.location.href) {
+        item.classList.add('active');
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter X: Title — Empower Playbook</title>
+    <link rel="stylesheet" href="../styles/design-system.css">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress">
+    <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Mobile Header -->
+<div class="mobile-header">
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <span style="font-family: var(--font-heading); font-weight: 600; font-size: var(--text-sm);">Empower Playbook</span>
+    <span style="font-size: var(--text-xs); color: var(--text-muted);">Ch X</span>
+</div>
+
+<!-- Sidebar Overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<div class="playbook-layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">Empower <span>Playbook</span></a>
+            <div class="sidebar-subtitle">Rural Economic Mobility</div>
+        </div>
+
+        <!-- Part 1 -->
+        <div class="nav-section">
+            <div class="nav-section-title">Part 1 — The Case</div>
+            <a href="chapter-1.html" class="nav-item">
+                <span class="nav-number">1</span>The Crisis
+            </a>
+            <a href="chapter-2.html" class="nav-item">
+                <span class="nav-number">2</span>The Workforce Gap
+            </a>
+            <a href="chapter-3.html" class="nav-item">
+                <span class="nav-number">3</span>Why Programs Fail
+            </a>
+        </div>
+
+        <!-- Part 2 -->
+        <div class="nav-section">
+            <div class="nav-section-title">Part 2 — The Method</div>
+            <a href="chapter-4.html" class="nav-item">
+                <span class="nav-number">4</span>The Empower Model
+            </a>
+            <a href="chapter-5.html" class="nav-item">
+                <span class="nav-number">5</span>Two-Generation Approach
+            </a>
+            <a href="chapter-6.html" class="nav-item">
+                <span class="nav-number">6</span>Employer Integration
+            </a>
+        </div>
+
+        <!-- Part 3 -->
+        <div class="nav-section">
+            <div class="nav-section-title">Part 3 — Implementation</div>
+            <a href="chapter-7.html" class="nav-item">
+                <span class="nav-number">7</span>Phased Approach
+            </a>
+            <a href="chapter-8.html" class="nav-item">
+                <span class="nav-number">8</span>Building Your Team
+            </a>
+            <a href="chapter-9.html" class="nav-item">
+                <span class="nav-number">9</span>What Kills Programs
+            </a>
+        </div>
+
+        <!-- Part 4 -->
+        <div class="nav-section">
+            <div class="nav-section-title">Part 4 — Scale</div>
+            <a href="chapter-10.html" class="nav-item">
+                <span class="nav-number">10</span>Funding
+            </a>
+            <a href="chapter-11.html" class="nav-item">
+                <span class="nav-number">11</span>Adapting the Model
+            </a>
+            <a href="chapter-12.html" class="nav-item">
+                <span class="nav-number">12</span>Scaling Beyond
+            </a>
+        </div>
+
+        <!-- Part 5 -->
+        <div class="nav-section">
+            <div class="nav-section-title">Part 5 — Resources</div>
+            <a href="chapter-13.html" class="nav-item">
+                <span class="nav-number">13</span>Templates & Tools
+            </a>
+            <a href="chapter-14.html" class="nav-item">
+                <span class="nav-number">14</span>Sector Guides
+            </a>
+            <a href="chapter-15.html" class="nav-item">
+                <span class="nav-number">15</span>Research Base
+            </a>
+            <a href="chapter-16.html" class="nav-item">
+                <span class="nav-number">16</span>Measuring Impact
+            </a>
+            <a href="chapter-17.html" class="nav-item">
+                <span class="nav-number">17</span>Fidelity Standards
+            </a>
+        </div>
+    </aside>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+        <!-- CHAPTER HEADER -->
+        <header class="chapter-header">
+            <div class="chapter-meta">
+                <span class="chapter-part">Part X — Section Name</span>
+                <span class="chapter-number">Chapter X of 17</span>
+            </div>
+            <h1 class="chapter-title">Chapter Title Goes Here</h1>
+            <p class="chapter-subtitle">One sentence describing what the reader will learn in this chapter and why it matters to them.</p>
+            <div class="chapter-badges">
+                <span class="badge badge-audience">Executives</span>
+                <span class="badge badge-audience">Funders</span>
+                <span class="badge badge-audience">Implementers</span>
+                <span class="badge badge-time">8 min read</span>
+            </div>
+        </header>
+
+        <!-- OPENING HOOK -->
+        <p class="lead">
+            This is the lead paragraph. Two to three sentences in slightly larger text that set the scene. What problem does this chapter address? Why should they care? Make it specific and human.
+        </p>
+
+        <div class="callout callout-dark">
+            <div class="callout-title">The Core Question</div>
+            <p>This framing box introduces the chapter's central concept, key question, or main framework. Think of it as the thesis statement — if someone only reads this box, they should understand what the chapter is about.</p>
+        </div>
+
+        <!-- BODY SECTION 1 -->
+        <div class="section-number">X.1</div>
+        <h2 id="section-1">First Section Title</h2>
+
+        <p>Opening paragraph for this section. What does this section cover and why does it matter? Keep paragraphs short — 3-4 sentences max for online reading.</p>
+
+        <p>Second paragraph with supporting detail. Remember the rhythm rule: never go more than 3 paragraphs without a visual break (callout, list, data box, quote, or table).</p>
+
+        <div class="callout callout-blue">
+            <div class="callout-title">Research Finding</div>
+            <p>Use blue callouts for research findings, evidence, citations, and academic context. Keep to 2-4 sentences. If it's longer, it should be a regular section instead.</p>
+        </div>
+
+        <p>Continue the section after the visual break. Each section should have a natural flow from opening to evidence to implication.</p>
+
+        <!-- BODY SECTION 2 -->
+        <div class="section-number">X.2</div>
+        <h2 id="section-2">Second Section Title</h2>
+
+        <p>This section might introduce a framework, process, or set of principles. Here's an example with a data box:</p>
+
+        <div class="data-box">
+            <div class="data-box-title">Key Metrics</div>
+            <div class="data-grid">
+                <div class="data-stat">
+                    <div class="data-number">73%</div>
+                    <div class="data-label">Completion rate for participants</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">$4.2M</div>
+                    <div class="data-label">Economic value generated</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">2.5x</div>
+                    <div class="data-label">Return on investment</div>
+                </div>
+            </div>
+        </div>
+
+        <p>After the data, interpret it. What do these numbers mean for the reader? Connect the evidence back to the chapter's core argument.</p>
+
+        <h3>A Subsection If Needed</h3>
+
+        <p>Use H3 subsections to break up longer sections. Keep to 2-3 max per H2 section — if you need more, the section is too broad.</p>
+
+        <ul>
+            <li>Use bulleted lists for items with no particular order</li>
+            <li>Keep items short — not paragraph-length</li>
+            <li>3-7 items is the sweet spot</li>
+        </ul>
+
+        <!-- BODY SECTION 3 -->
+        <div class="section-number">X.3</div>
+        <h2 id="section-3">Third Section Title</h2>
+
+        <p>Here's an example using a blockquote for a practitioner voice:</p>
+
+        <blockquote>
+            <p>"When we shifted from a compliance mindset to a coaching relationship, everything changed. Participants started showing up not because they had to, but because they wanted to."</p>
+            <cite>Sarah Martinez, Program Director — Rural Workforce Alliance</cite>
+        </blockquote>
+
+        <p>Follow quotes with interpretation. What does this tell us? How does it connect to the chapter's argument?</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">Recommended Approach</div>
+            <p>Use green callouts for Empower methodology, recommended approaches, and "do this" guidance. These should feel actionable and directive.</p>
+        </div>
+
+        <p>Continue with the section's conclusion, transitioning toward the key takeaway.</p>
+
+        <!-- KEY TAKEAWAY -->
+        <div class="key-takeaway">
+            <div class="key-takeaway-label">Key Takeaway</div>
+            <p>Summarize the chapter's main insight in 2-4 sentences. If someone only reads this box, they should understand the core message. Don't introduce new information here.</p>
+            <div class="highlight">The single most important sentence from this chapter — the one thing the reader should remember.</div>
+        </div>
+
+        <!-- CHAPTER NAVIGATION -->
+        <nav class="chapter-nav">
+            <a href="chapter-X.html">
+                <span class="nav-label">Previous</span>
+                <span class="nav-title">&larr; Ch X: Previous Title</span>
+            </a>
+            <a href="chapter-X.html">
+                <span class="nav-label">Next</span>
+                <span class="nav-title">Ch X: Next Title &rarr;</span>
+            </a>
+        </nav>
+
+    </main>
+</div>
+
+<!-- Scripts -->
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('visible');
+}
+
+// Active nav item
+document.querySelectorAll('.nav-item').forEach(item => {
+    if (item.href === window.location.href) {
+        item.classList.add('active');
+    }
+});
+</script>
+
+</body>
+</html>

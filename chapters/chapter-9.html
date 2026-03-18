@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9: What Kills Programs (And How to Avoid It) — Empower Playbook</title>
+    <link rel="stylesheet" href="../styles/design-system.css">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress">
+    <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Mobile Header -->
+<div class="mobile-header">
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <span style="font-family: var(--font-heading); font-weight: 600; font-size: var(--text-sm);">Empower Playbook</span>
+    <span style="font-size: var(--text-xs); color: var(--text-muted);">Ch 9</span>
+</div>
+
+<!-- Sidebar Overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<div class="playbook-layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo"><img src="../images/euc-logo.png" alt="Empower Upper Cumberland"><div class="sidebar-logo-text">The <span>Playbook</span></div><div class="sidebar-subtitle">Rural Economic Mobility</div></a>
+            
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 1 — The Case</div>
+            <a href="chapter-1.html" class="nav-item"><span class="nav-number">1</span>A Different Model</a>
+            <a href="chapter-2.html" class="nav-item"><span class="nav-number">2</span>The Problem</a>
+            <a href="chapter-3.html" class="nav-item"><span class="nav-number">3</span>The Proof</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 2 — The Method</div>
+            <a href="chapter-4.html" class="nav-item"><span class="nav-number">4</span>Non-Negotiables</a>
+            <a href="chapter-5.html" class="nav-item"><span class="nav-number">5</span>Adaptable Components</a>
+            <a href="chapter-6.html" class="nav-item"><span class="nav-number">6</span>Employer Certification</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 3 — Implementation</div>
+            <a href="chapter-7.html" class="nav-item"><span class="nav-number">7</span>Phased Approach</a>
+            <a href="chapter-8.html" class="nav-item"><span class="nav-number">8</span>Building Your Team</a>
+            <a href="chapter-9.html" class="nav-item"><span class="nav-number">9</span>What Kills Programs</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 4 — Sustainability &amp; Scale</div>
+            <a href="chapter-10.html" class="nav-item"><span class="nav-number">10</span>Funding</a>
+            <a href="chapter-11.html" class="nav-item"><span class="nav-number">11</span>Adapting the Model</a>
+            <a href="chapter-12.html" class="nav-item"><span class="nav-number">12</span>Scaling Beyond</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 5 — Tools &amp; Resources</div>
+            <a href="chapter-13.html" class="nav-item"><span class="nav-number">13</span>The Toolkit</a>
+            <a href="chapter-14.html" class="nav-item"><span class="nav-number">14</span>Training Modules</a>
+            <a href="chapter-15.html" class="nav-item"><span class="nav-number">15</span>Case Studies</a>
+            <a href="chapter-16.html" class="nav-item"><span class="nav-number">16</span>FAQ</a>
+            <a href="chapter-17.html" class="nav-item"><span class="nav-number">17</span>Getting Started</a>
+        </div>
+    </aside>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+        <!-- CHAPTER HEADER -->
+        <header class="chapter-header">
+            <div class="chapter-meta">
+                <span class="chapter-part">Part 3 — Implementation</span>
+                <span class="chapter-number">Chapter 9 of 17</span>
+            </div>
+            <h1 class="chapter-title">What Kills Programs (And How to Avoid It)</h1>
+            <p class="chapter-subtitle">Every failure mode showed up at least once across 14 counties and 926 families. Here's what nearly killed the model — and how to prevent it.</p>
+            <div class="chapter-badges">
+                <span class="badge badge-audience">Executives</span>
+                <span class="badge badge-audience">Program Managers</span>
+                <span class="badge badge-time">10 min read</span>
+            </div>
+        </header>
+
+        <!-- OPENING HOOK -->
+        <p class="lead">
+            The Empower Method has been tested across 14 counties and 926 families. Along the way, every failure mode showed up at least once. Here's what nearly killed the model — and how to prevent it from killing yours.
+        </p>
+
+        <div class="callout callout-dark">
+            <div class="callout-title">The Core Question</div>
+            <p>What are the predictable ways that poverty exit programs fail — and how do you build immunity before they strike? Eight failure modes emerged from Empower's field experience. Every one of them has a common root: organizations that shortcut the infrastructure to get to the families faster.</p>
+        </div>
+
+        <!-- KEY STATS -->
+        <div class="data-box">
+            <div class="data-box-title">The Eight Failure Modes</div>
+            <div class="data-grid">
+                <div class="data-stat">
+                    <div class="data-number">8</div>
+                    <div class="data-label">Distinct failure modes identified across 14 counties</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">926</div>
+                    <div class="data-label">Families served — every failure mode appeared at least once</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">48 hrs</div>
+                    <div class="data-label">Maximum partner response time before coordination has collapsed</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">60%</div>
+                    <div class="data-label">Revenue from a single source signals funding fragility</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 9.1 -->
+        <div class="section-number">9.1</div>
+        <h2 id="section-1">Coordination Collapse</h2>
+
+        <p><strong>What it looks like:</strong> Agencies that signed partnership agreements stop showing up to coordination meetings. Navigators can't reach partner contacts. Families start bouncing between agencies again — the exact problem the model was designed to solve.</p>
+
+        <p><strong>Why it happens:</strong> Coordination requires ongoing effort. When the initial energy fades and workloads mount, agencies default to their own priorities. Without a backbone coordinator actively maintaining relationships, the system fragments.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Weekly coordination meetings — not optional, not "when schedules allow"</li>
+                <li>Named point person for each family, visible to all partners</li>
+                <li>Shared data dashboard so all agencies see the same information</li>
+                <li>A Collective Impact Team (or equivalent function) whose primary job is keeping coordination alive</li>
+            </ul>
+        </div>
+
+        <p><strong>The test:</strong> If a family hits a barrier at 3 PM on a Tuesday, can their navigator reach the relevant partner agency and get action within 24 hours? If the answer is no, your coordination has collapsed.</p>
+
+        <!-- SECTION 9.2 -->
+        <div class="section-number">9.2</div>
+        <h2 id="section-2">Communication Breakdown</h2>
+
+        <p><strong>What it looks like:</strong> Information dies in inboxes. Partners use different terminology for the same concepts. Leadership hears about problems weeks after they start. Navigators can't find out what happened to the referral they made last month.</p>
+
+        <p><strong>Why it happens:</strong> Every organization has its own communication culture. Without shared protocols, information passes through translation layers that distort, delay, or lose it entirely.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Shared terminology — agree on what words mean before you start working together</li>
+                <li>Communication protocols — who needs to know what, how fast, through which channel</li>
+                <li>Central updates — a weekly digest or dashboard view that keeps everyone current</li>
+                <li>Data dashboard as single source of truth — not competing spreadsheets</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9.3 -->
+        <div class="section-number">9.3</div>
+        <h2 id="section-3">Duplicate Programs</h2>
+
+        <p><strong>What it looks like:</strong> Three organizations run job readiness workshops. Two teach financial literacy. Four distribute food. They compete for the same grant dollars, serve the same families, and duplicate each other's work — while critical gaps go untouched.</p>
+
+        <p><strong>Why it happens:</strong> Programs are funded individually. Each organization builds what their funder pays for, not what the community needs. Nobody maps the full landscape before launching.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Map all existing services in Phase 1 — before you build anything new</li>
+                <li>Consolidate or specialize — if three organizations do job readiness, one does it for the system and the other two redirect resources to gaps</li>
+                <li>Coordination agreements that assign ownership — "you handle childcare, we handle benefits cliff navigation, they handle employer relationships"</li>
+                <li>Use the data dashboard to make duplication visible</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9.4 -->
+        <div class="section-number">9.4</div>
+        <h2 id="section-4">Funding as Afterthought</h2>
+
+        <p><strong>What it looks like:</strong> The program launches with a single grant. Eighteen months in, the grant cycle ends. Staff panic. Programs get cut. Families lose their navigators mid-journey — producing the negative outcomes that Empower's data shows short-term relationships create.</p>
+
+        <p><strong>Why it happens:</strong> Mission-driven organizations focus on mission and treat funding as a necessary annoyance rather than a strategic function. They hire navigators before they hire a grant writer.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Dedicated grant writer / funding strategist from Phase 1</li>
+                <li>Pipeline math: pursue $4-5M to close $2.5M. Assume 50-60% conversion.</li>
+                <li>Maintain 15-18 simultaneous foundation relationships</li>
+                <li>Diversify from day one — foundation grants, government contracts, employer contributions, earned revenue</li>
+                <li>Never build a program on a single funding source</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9.5 -->
+        <div class="section-number">9.5</div>
+        <h2 id="section-5">Vision Drift</h2>
+
+        <p><strong>What it looks like:</strong> Leadership starts aligned on poverty exit. Six months in, a partner agency wants to add a food distribution component. Another wants to count referrals as outcomes. A funder offers money for a tangentially related initiative. Gradually, the model drifts from poverty alleviation back to poverty management.</p>
+
+        <p><strong>Why it happens:</strong> External pressure is constant. Funders have their own priorities. Partners have their own metrics. The urgency of daily operations drowns out strategic clarity.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Documented shared vision — signed, specific, and referenced regularly</li>
+                <li>Quarterly re-alignment meetings — explicitly ask: "Are we still building a poverty exit system?"</li>
+                <li>Decision framework — when a new opportunity arises, test it: "Does this advance families toward 225% FPL, or does it just add activity?"</li>
+                <li>The Leadership Team function exists partly for this: protecting the model's integrity against well-intentioned drift</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9.6 -->
+        <div class="section-number">9.6</div>
+        <h2 id="section-6">Training-and-Forget</h2>
+
+        <p><strong>What it looks like:</strong> Staff attend initial training. Within 6 months, new hires have been onboarded informally ("shadow someone for a week"), benefits cliff tools haven't been updated for policy changes, and navigators are reverting to case management habits.</p>
+
+        <p><strong>Why it happens:</strong> Training is treated as a box to check, not a capability to maintain.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Ongoing training calendar — not just initial certification</li>
+                <li>Navigator peer learning sessions — regular case conferences</li>
+                <li>Benefits cliff tool refreshers when policy changes</li>
+                <li>Return to the shared vision with every new hire and every quarter</li>
+                <li>Assess methodology adherence, not just activity metrics</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9.7 -->
+        <div class="section-number">9.7</div>
+        <h2 id="section-7">Checkbox Culture</h2>
+
+        <p><strong>What it looks like:</strong> Staff complete required tasks — intake forms, referral logs, meeting attendance — but don't solve problems. A family's childcare falls through and the navigator documents it but doesn't scramble to fix it. Reports look clean. Outcomes are flat.</p>
+
+        <p><strong>Why it happens:</strong> Hiring for compliance skills instead of problem-solving instinct. Measuring activity instead of outcomes. Rewarding completed paperwork instead of resolved barriers.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Hire for fit (see Chapter 8) — the interview question: "Tell me about a time you solved a problem that wasn't in your job description"</li>
+                <li>Measure outcomes, not activities — families at 225% FPL, not referrals made</li>
+                <li>Celebrate problem-solving publicly — when a navigator finds a creative solution to a barrier, make it visible to the team</li>
+                <li>Leadership that models solutions-orientation, not compliance-orientation</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9.8 -->
+        <div class="section-number">9.8</div>
+        <h2 id="section-8">Understaffed Leadership</h2>
+
+        <p><strong>What it looks like:</strong> Two people make every decision. The Executive Director is supervising navigators. The Program Director is entering data. Nobody is building employer relationships, managing the funding pipeline, or coordinating with partner agencies at the systems level.</p>
+
+        <p><strong>Why it happens:</strong> Organizations underinvest in leadership roles because navigators feel more directly connected to the mission. "We need more people serving families" sounds better than "we need a Project Coordinator."</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">How to Prevent It</div>
+            <ul>
+                <li>Right-size the leadership team before launch — not after bottlenecks appear</li>
+                <li>The four core roles (Executive Director, Program Director, Project Coordinator, Lead Navigator) are all non-negotiable</li>
+                <li>If your leaders are doing operational tasks that should be handled by someone else, you don't have enough leaders</li>
+                <li>Funders: when an organization asks for leadership funding, that's a sign of maturity, not overhead bloat</li>
+            </ul>
+        </div>
+
+        <!-- THE QUICK DIAGNOSTIC -->
+        <h2>The Quick Diagnostic</h2>
+
+        <p>Run this check quarterly. If you answer "yes" to any question, the corresponding failure mode is active.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>If Yes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Are partner agencies missing coordination meetings?</td>
+                    <td>9.1 Coordination Collapse</td>
+                </tr>
+                <tr>
+                    <td>Are navigators waiting more than 48 hours for partner responses?</td>
+                    <td>9.2 Communication Breakdown</td>
+                </tr>
+                <tr>
+                    <td>Are multiple agencies delivering the same service to the same families?</td>
+                    <td>9.3 Duplicate Programs</td>
+                </tr>
+                <tr>
+                    <td>Is more than 60% of your revenue from a single source?</td>
+                    <td>9.4 Funding as Afterthought</td>
+                </tr>
+                <tr>
+                    <td>Has anyone proposed adding a program component that doesn't advance 225% FPL outcomes?</td>
+                    <td>9.5 Vision Drift</td>
+                </tr>
+                <tr>
+                    <td>Have you updated staff training in the past 90 days?</td>
+                    <td>9.6 Training-and-Forget</td>
+                </tr>
+                <tr>
+                    <td>Are activity metrics (referrals, meetings) up but outcome metrics (income, employment) flat?</td>
+                    <td>9.7 Checkbox Culture</td>
+                </tr>
+                <tr>
+                    <td>Is any leadership role spending more than 30% of their time on tasks below their function?</td>
+                    <td>9.8 Understaffed Leadership</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- FUNDER CLOSE -->
+        <div class="callout callout-dark">
+            <div class="callout-title">For Funders and Policymakers</div>
+            <p>Every failure mode in this chapter has a common root: organizations that shortcut the infrastructure to get to the families faster. The Empower Method's results come from building the system right — not from heroic individual effort. When evaluating an implementation, use the Quick Diagnostic. If any answer is "yes," the model isn't running at full capacity yet. That's not a reason to defund. It's a reason to invest in the fix.</p>
+        </div>
+
+        <!-- KEY TAKEAWAY -->
+        <div class="key-takeaway">
+            <div class="key-takeaway-label">Key Takeaway</div>
+            <p>Eight failure modes threaten every Empower implementation: coordination collapse, communication breakdown, duplicate programs, funding as afterthought, vision drift, training-and-forget, checkbox culture, and understaffed leadership. All eight share a common root — shortcutting infrastructure to reach families faster. The Quick Diagnostic gives you a quarterly check against each one.</p>
+            <div class="highlight">Every failure mode in this chapter has a fix. The organizations that fail are the ones that don't see the problem until it's too late. Run the diagnostic quarterly.</div>
+        </div>
+
+        <!-- CHAPTER NAVIGATION -->
+        <nav class="chapter-nav">
+            <a href="chapter-8.html">
+                <span class="nav-label">Previous</span>
+                <span class="nav-title">&larr; Ch 8: Building Your Team</span>
+            </a>
+            <a href="chapter-10.html">
+                <span class="nav-label">Next</span>
+                <span class="nav-title">Ch 10: Funding Your Implementation &rarr;</span>
+            </a>
+        </nav>
+
+
+        <!-- CHAPTER FOOTER -->
+        <footer class="chapter-footer">
+            <div class="footer-logos">
+                <a href="../index.html" class="footer-logo-euc">
+                    <img src="../images/euc-logo.png" alt="Empower Upper Cumberland">
+                </a>
+                <span style="color: var(--border-strong); font-size: var(--text-xl); font-weight: 200;">|</span>
+                <span class="footer-logo-tps">
+                    <span class="tps-the">The</span>
+                    <span class="tps-poverty">Poverty</span>
+                    <span class="tps-solution">Solution</span>
+                </span>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- Scripts -->
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('visible');
+}
+
+// Active nav item
+document.querySelectorAll('.nav-item').forEach(item => {
+    if (item.href === window.location.href) {
+        item.classList.add('active');
+    }
+});
+</script>
+
+</body>
+</html>

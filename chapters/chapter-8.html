@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Building Your Team — Empower Playbook</title>
+    <link rel="stylesheet" href="../styles/design-system.css">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress">
+    <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Mobile Header -->
+<div class="mobile-header">
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <span style="font-family: var(--font-heading); font-weight: 600; font-size: var(--text-sm);">Empower Playbook</span>
+    <span style="font-size: var(--text-xs); color: var(--text-muted);">Ch 8</span>
+</div>
+
+<!-- Sidebar Overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<div class="playbook-layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo"><img src="../images/euc-logo.png" alt="Empower Upper Cumberland"><div class="sidebar-logo-text">The <span>Playbook</span></div><div class="sidebar-subtitle">Rural Economic Mobility</div></a>
+            
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 1 — The Case</div>
+            <a href="chapter-1.html" class="nav-item"><span class="nav-number">1</span>A Different Model</a>
+            <a href="chapter-2.html" class="nav-item"><span class="nav-number">2</span>The Problem</a>
+            <a href="chapter-3.html" class="nav-item"><span class="nav-number">3</span>The Proof</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 2 — The Method</div>
+            <a href="chapter-4.html" class="nav-item"><span class="nav-number">4</span>Non-Negotiables</a>
+            <a href="chapter-5.html" class="nav-item"><span class="nav-number">5</span>Adaptable Components</a>
+            <a href="chapter-6.html" class="nav-item"><span class="nav-number">6</span>Employer Certification</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 3 — Implementation</div>
+            <a href="chapter-7.html" class="nav-item"><span class="nav-number">7</span>Phased Approach</a>
+            <a href="chapter-8.html" class="nav-item"><span class="nav-number">8</span>Building Your Team</a>
+            <a href="chapter-9.html" class="nav-item"><span class="nav-number">9</span>What Kills Programs</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 4 — Sustainability &amp; Scale</div>
+            <a href="chapter-10.html" class="nav-item"><span class="nav-number">10</span>Funding</a>
+            <a href="chapter-11.html" class="nav-item"><span class="nav-number">11</span>Adapting the Model</a>
+            <a href="chapter-12.html" class="nav-item"><span class="nav-number">12</span>Scaling Beyond</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Part 5 — Tools &amp; Resources</div>
+            <a href="chapter-13.html" class="nav-item"><span class="nav-number">13</span>The Toolkit</a>
+            <a href="chapter-14.html" class="nav-item"><span class="nav-number">14</span>Training Modules</a>
+            <a href="chapter-15.html" class="nav-item"><span class="nav-number">15</span>Case Studies</a>
+            <a href="chapter-16.html" class="nav-item"><span class="nav-number">16</span>FAQ</a>
+            <a href="chapter-17.html" class="nav-item"><span class="nav-number">17</span>Getting Started</a>
+        </div>
+    </aside>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content">
+
+        <!-- CHAPTER HEADER -->
+        <header class="chapter-header">
+            <div class="chapter-meta">
+                <span class="chapter-part">Part 3 — Implementation</span>
+                <span class="chapter-number">Chapter 8 of 17</span>
+            </div>
+            <h1 class="chapter-title">Building Your Team</h1>
+            <p class="chapter-subtitle">The right people in the right roles — trained, supported, and empowered to solve problems — are what separate a poverty exit system from another well-meaning program.</p>
+            <div class="chapter-badges">
+                <span class="badge badge-audience">Executives</span>
+                <span class="badge badge-audience">Program Managers</span>
+                <span class="badge badge-time">10 min read</span>
+            </div>
+        </header>
+
+        <!-- OPENING HOOK -->
+        <p class="lead">
+            The model doesn't run itself. The right people in the right roles — trained, supported, and empowered to solve problems — are what separate a poverty exit system from another well-meaning program.
+        </p>
+
+        <div class="callout callout-dark">
+            <div class="callout-title">The Core Question</div>
+            <p>How do you build a team that can actually move families out of poverty — not just manage them through it? By hiring for problem-solving instinct over credentials, investing in leadership infrastructure, and treating navigator recruitment and retention as the binding constraint on your entire model.</p>
+        </div>
+
+        <!-- KEY STATS -->
+        <div class="data-box">
+            <div class="data-box-title">Team Architecture at a Glance</div>
+            <div class="data-grid">
+                <div class="data-stat">
+                    <div class="data-number">4</div>
+                    <div class="data-label">Core roles required before enrolling any families</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">17</div>
+                    <div class="data-label">Navigators across 14 counties at full EUC scale</div>
+                </div>
+                <div class="data-stat">
+                    <div class="data-number">21 hrs</div>
+                    <div class="data-label">Minimum training hours before Phase 2 launch</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 8.1 -->
+        <div class="section-number">8.1</div>
+        <h2 id="section-1">The Four Core Roles</h2>
+
+        <p>Every Empower implementation needs these four roles operational before enrolling families.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Responsibility</th>
+                    <th>Non-Negotiable?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Executive Director</strong></td>
+                    <td>Vision, external relationships, funding strategy, policy advocacy. Owns the model's sustainability and growth.</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td><strong>Program Director</strong></td>
+                    <td>Day-to-day operations, navigator supervision, partner coordination. Ensures the methodology is followed.</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td><strong>Project Coordinator</strong></td>
+                    <td>Data management, reporting, dashboard maintenance. Turns raw data into actionable intelligence for navigators and leadership.</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td><strong>Lead Navigator</strong></td>
+                    <td>Senior navigator who mentors other navigators, handles complex cases, and serves as the bridge between ground-level work and program leadership.</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Supporting Roles (Strongly Recommended)</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Responsibility</th>
+                    <th>When to Add</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Grant Writer / Researcher</strong></td>
+                    <td>Funding sustainability — pipeline development, proposal writing, funder relationship management</td>
+                    <td>From Phase 1 if possible. Dedicated capacity recommended.</td>
+                </tr>
+                <tr>
+                    <td><strong>Employer Liaison</strong></td>
+                    <td>Certification program, job pipeline development, employer relationship management</td>
+                    <td>Phase 1 or early Phase 2</td>
+                </tr>
+                <tr>
+                    <td><strong>Partner Coordinator</strong></td>
+                    <td>Agency relationships, systems coordination, convening facilitation</td>
+                    <td>When partner network exceeds what the Program Director can manage alone</td>
+                </tr>
+                <tr>
+                    <td><strong>Additional Navigators</strong></td>
+                    <td>Direct participant support, caseload coverage</td>
+                    <td>Scale based on enrollment — maintain manageable caseloads</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Scaling the Team</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Implementation Size</th>
+                    <th>Minimum Staff</th>
+                    <th>Navigator Ratio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Small pilot (1-3 counties, 50 families)</td>
+                    <td>4 core roles + 1-2 navigators</td>
+                    <td>Manageable caseloads per navigator</td>
+                </tr>
+                <tr>
+                    <td>Medium (5-8 counties, 125 families)</td>
+                    <td>4 core roles + 4-6 navigators + employer liaison</td>
+                    <td>Same ratio maintained</td>
+                </tr>
+                <tr>
+                    <td>Full (14 counties, 250+ families)</td>
+                    <td>4 core roles + 10-17 navigators + full supporting team</td>
+                    <td>EUC operates with 17 navigators across 14 counties</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 8.2 -->
+        <div class="section-number">8.2</div>
+        <h2 id="section-2">Hiring for Fit, Not Just Skills</h2>
+
+        <p>The difference between a poverty management program and a poverty exit system often comes down to the people running it. Skills can be taught. Mindset cannot.</p>
+
+        <h3>What to Screen For</h3>
+
+        <p><strong>Problem solvers, not checkbox people.</strong> The Empower Method encounters barriers that don't fit in a procedure manual. A family's childcare falls through the week they start a new job. An employer's HR policy conflicts with a benefits cliff transition plan. A housing waitlist jumps from 6 months to 18 months. The navigator who succeeds is the one who finds a solution, not the one who documents the problem and moves to the next case.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">The Interview Question That Matters</div>
+            <p>"Tell me about a time you solved a problem that wasn't in your job description."</p>
+        </div>
+
+        <p><strong>Cultural fit indicators:</strong></p>
+
+        <ul>
+            <li><strong>Mission-driven</strong> — they're here because they believe families can exit poverty, not just be managed through it</li>
+            <li><strong>Solutions-oriented</strong> — their instinct is to fix, not to escalate</li>
+            <li><strong>Comfortable with ambiguity</strong> — they can work effectively when the playbook doesn't cover the situation</li>
+            <li><strong>Relationship-builders</strong> — navigators succeed through trust, which requires genuine human connection</li>
+            <li><strong>Embedded in the community</strong> — navigators who know the landscape of their counties outperform those who don't</li>
+        </ul>
+
+        <h3>What to Screen Out</h3>
+
+        <ul>
+            <li><strong>Compliance-first mindset</strong> — navigators who prioritize paperwork over people will replicate the system families are trying to escape</li>
+            <li><strong>Referral-only orientation</strong> — "I connected them to the right agency" is not the same as "I made sure the agency actually helped them"</li>
+            <li><strong>Burnout risk without support</strong> — this work is emotionally demanding. Hire people who can sustain it, and then give them the support to do so</li>
+        </ul>
+
+        <!-- SECTION 8.3 -->
+        <div class="section-number">8.3</div>
+        <h2 id="section-3">The Leadership Gap</h2>
+
+        <p>Most programs are understaffed at the leadership level. This creates bottlenecks, burnout, and decision paralysis.</p>
+
+        <p><strong>The pattern:</strong> An organization hires navigators (ground-level capacity) but doesn't invest in the Program Director, Project Coordinator, or employer liaison roles that make navigator work effective. Navigators end up doing systems coordination, data entry, employer outreach, and their own supervision. The model collapses into overworked case management.</p>
+
+        <div class="callout callout-blue">
+            <div class="callout-title">The Rule of Thumb</div>
+            <p>You need enough leaders to actually move things, not just report on them. If your Program Director is spending 80% of their time on data reporting, they're not directing the program. If your Executive Director is managing navigators, they're not building funding sustainability.</p>
+        </div>
+
+        <p><strong>The three-team connection:</strong> The three-team architecture (Chapter 5) exists partly to solve this. The Economic Stability Team handles families. The Collective Impact Team handles systems coordination. The Leadership Team handles policy and funding. When all three functions land on two people, nothing gets done well.</p>
+
+        <!-- SECTION 8.4 -->
+        <div class="section-number">8.4</div>
+        <h2 id="section-4">Training Requirements</h2>
+
+        <h3>Before Enrolling Families (Phase 1)</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Training</th>
+                    <th>Audience</th>
+                    <th>Duration</th>
+                    <th>Required?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Empower methodology certification</td>
+                    <td>All staff</td>
+                    <td>2 hours</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Benefits cliff tool training</td>
+                    <td>Navigators, Lead Navigator</td>
+                    <td>4 hours</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Navigator best practices</td>
+                    <td>Navigators</td>
+                    <td>6 hours</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>ALICE / Poverty IQ orientation</td>
+                    <td>All staff and partners</td>
+                    <td>1 hour</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Data dashboard training</td>
+                    <td>Project Coordinator, navigators</td>
+                    <td>2 hours</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Employer certification training</td>
+                    <td>Employer Liaison</td>
+                    <td>2 hours</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Leadership alignment workshop</td>
+                    <td>Leadership Team</td>
+                    <td>4 hours</td>
+                    <td>Recommended</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Ongoing Training</h3>
+
+        <p>Training is not a one-time event. The model evolves. Staff turn over. Community conditions change.</p>
+
+        <ul>
+            <li><strong>Return to the shared vision</strong> quarterly — ensure the team is still aligned on goals and methodology</li>
+            <li><strong>Benefits cliff tool updates</strong> — as policy changes, cliff points shift. Staff must stay current.</li>
+            <li><strong>Navigator peer learning</strong> — regular case conferences where navigators share barrier solutions</li>
+            <li><strong>Employer relationship management</strong> — ongoing education as the certified employer network expands</li>
+        </ul>
+
+        <div class="callout callout-blue">
+            <div class="callout-title">What Kills Programs (Preview of Chapter 9)</div>
+            <p>Training once and never revisiting. Organizations that treat onboarding as the end of professional development produce checkbox staff within 12 months.</p>
+        </div>
+
+        <!-- SECTION 8.5 -->
+        <div class="section-number">8.5</div>
+        <h2 id="section-5">Navigator Recruitment and Retention</h2>
+
+        <p>Navigators are the model's most critical human asset — and in rural labor markets, the hardest to recruit.</p>
+
+        <h3>The Recruitment Challenge</h3>
+
+        <p>In counties where the top employers are the hospital, the school system, and one manufacturer, the talent pool for navigator roles is thin. You're looking for people who are mission-driven, solutions-oriented, embedded in their communities, and willing to do emotionally demanding work for compensation that competes with healthcare and education salaries.</p>
+
+        <h3>What Works</h3>
+
+        <p><strong>Recruit from the community, not from job boards.</strong> The best navigators know their counties — the churches, the employers, the informal networks that no service directory captures. They've often worked in social services, healthcare, education, or community organizations. Some are program graduates themselves.</p>
+
+        <div class="callout callout-green">
+            <div class="callout-title">Recommended Approach</div>
+            <p><strong>Pay competitively.</strong> Navigator roles that pay below the local market for comparable positions (social work, community health, case management) will produce constant turnover — creating the exact relationship disruption the model is designed to prevent. If navigators can earn more at the hospital, they will. Budget accordingly.</p>
+        </div>
+
+        <p><strong>Build the navigator career pathway.</strong> Navigator to Lead Navigator to Program Director is a real career trajectory. Making this visible during recruitment attracts people who want to grow, not just fill a role. The graduate-to-navigator pipeline (Ch 5.5) adds another entry point.</p>
+
+        <p><strong>Invest in retention as seriously as recruitment.</strong> Navigator burnout is real. The work is emotionally intensive. Manageable caseloads, peer support, regular supervision, and ongoing training aren't perks — they're the infrastructure that keeps navigators effective and employed.</p>
+
+        <h3>The Scale Constraint</h3>
+
+        <p>Navigator recruitment is the binding constraint on scaling the Empower Method. You cannot scale faster than you can recruit and train qualified navigators. The Empower Academy training sequence (Ch 14) ensures quality. But the pipeline of people who enter that training depends on compensation, community engagement, and organizational reputation.</p>
+
+        <div class="callout callout-blue">
+            <div class="callout-title">For Funders</div>
+            <p>When an organization requests funding for navigator compensation above minimum levels, that's not overhead inflation. It's the investment that determines whether navigators stay long enough to complete the 18-24 month relationships that produce outcomes. Underpaying navigators is the most expensive mistake an implementation can make.</p>
+        </div>
+
+        <!-- FUNDER CLOSE -->
+        <div class="callout callout-dark">
+            <div class="callout-title">For Funders and Policymakers</div>
+            <p>When an organization asks you to fund leadership positions — an Executive Director, a Program Director, a Project Coordinator — that's not overhead. That's the infrastructure that makes navigator work effective. The organizations that underinvest in leadership are the ones that produce the fragmented results you're already tired of funding. The four core roles aren't administrative bloat. They're the architecture of a poverty exit system.</p>
+        </div>
+
+        <!-- KEY TAKEAWAY -->
+        <div class="key-takeaway">
+            <div class="key-takeaway-label">Key Takeaway</div>
+            <p>Building an effective Empower team requires four non-negotiable core roles before any families enroll, hiring for problem-solving mindset over credentials, investing in leadership infrastructure as seriously as frontline capacity, and treating navigator recruitment and retention as the binding constraint on your model's growth. Skills can be taught. Mindset cannot.</p>
+            <div class="highlight">The right people in the right roles — trained, supported, and empowered to solve problems — are what separate a poverty exit system from another well-meaning program.</div>
+        </div>
+
+        <!-- CHAPTER NAVIGATION -->
+        <nav class="chapter-nav">
+            <a href="chapter-7.html">
+                <span class="nav-label">Previous</span>
+                <span class="nav-title">&larr; Ch 7: The Phased Approach</span>
+            </a>
+            <a href="chapter-9.html">
+                <span class="nav-label">Next</span>
+                <span class="nav-title">Ch 9: What Kills Programs &rarr;</span>
+            </a>
+        </nav>
+
+
+        <!-- CHAPTER FOOTER -->
+        <footer class="chapter-footer">
+            <div class="footer-logos">
+                <a href="../index.html" class="footer-logo-euc">
+                    <img src="../images/euc-logo.png" alt="Empower Upper Cumberland">
+                </a>
+                <span style="color: var(--border-strong); font-size: var(--text-xl); font-weight: 200;">|</span>
+                <span class="footer-logo-tps">
+                    <span class="tps-the">The</span>
+                    <span class="tps-poverty">Poverty</span>
+                    <span class="tps-solution">Solution</span>
+                </span>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- Scripts -->
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('visible');
+}
+
+// Active nav item
+document.querySelectorAll('.nav-item').forEach(item => {
+    if (item.href === window.location.href) {
+        item.classList.add('active');
+    }
+});
+</script>
+
+</body>
+</html>

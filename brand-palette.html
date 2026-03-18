@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Palette — Empower Playbook V3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #F9FAFB;
+            color: #1F2937;
+            padding: 48px 24px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            color: #2a4571;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6B7280;
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.25rem;
+            color: #2a4571;
+            margin: 48px 0 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin: 32px 0 12px;
+        }
+
+        /* Brand Colors - Primary Row */
+        .brand-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 24px 0 40px;
+        }
+
+        .brand-swatch {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .brand-swatch .color-block {
+            height: 120px;
+            display: flex;
+            align-items: flex-end;
+            padding: 12px;
+        }
+
+        .brand-swatch .color-info {
+            padding: 12px;
+            background: #fff;
+        }
+
+        .brand-swatch .color-name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1F2937;
+        }
+
+        .brand-swatch .color-hex {
+            font-size: 0.8rem;
+            color: #6B7280;
+            font-family: monospace;
+            cursor: pointer;
+        }
+
+        .brand-swatch .color-hex:hover {
+            color: #46729d;
+        }
+
+        .brand-swatch .color-role {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            margin-top: 4px;
+        }
+
+        /* Tint/Shade Scale */
+        .scale-row {
+            display: flex;
+            gap: 4px;
+            margin: 8px 0 24px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .scale-swatch {
+            flex: 1;
+            height: 72px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 6px 4px;
+            cursor: pointer;
+            transition: transform 150ms ease;
+            position: relative;
+        }
+
+        .scale-swatch:hover {
+            transform: scaleY(1.15);
+            z-index: 1;
+        }
+
+        .scale-swatch .step {
+            font-size: 0.6rem;
+            font-weight: 600;
+            opacity: 0.7;
+        }
+
+        .scale-swatch .hex {
+            font-size: 0.55rem;
+            font-family: monospace;
+            opacity: 0;
+            transition: opacity 150ms;
+        }
+
+        .scale-swatch:hover .hex {
+            opacity: 0.9;
+        }
+
+        /* Wheel visualization */
+        .wheel-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .wheel {
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+
+        .wheel-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #2a4571;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .wheel-ring {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .wheel-ring-outer {
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 0;
+            background: conic-gradient(
+                #2a4571 0deg 90deg,
+                #46729d 90deg 180deg,
+                #545454 180deg 270deg,
+                #99B83C 270deg 285deg,
+                #C5CDD6 285deg 360deg
+            );
+        }
+
+        .wheel-ring-mid {
+            width: 300px;
+            height: 300px;
+            top: 50px;
+            left: 50px;
+            background: conic-gradient(
+                #3A5C8A 0deg 90deg,
+                #6A94BB 90deg 180deg,
+                #7A7A7A 180deg 270deg,
+                #B5CC6D 270deg 285deg,
+                #DDE1E6 285deg 360deg
+            );
+        }
+
+        .wheel-ring-inner {
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: 100px;
+            background: conic-gradient(
+                #5A7FA3 0deg 90deg,
+                #A3BCD6 90deg 180deg,
+                #A8A8A8 180deg 270deg,
+                #D4E4A3 270deg 285deg,
+                #EEF0F4 285deg 360deg
+            );
+        }
+
+        /* Combination demos */
+        .combo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .combo-card {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #E5E7EB;
+        }
+
+        .combo-preview {
+            padding: 24px;
+            min-height: 140px;
+        }
+
+        .combo-label {
+            padding: 12px;
+            background: #fff;
+            font-size: 0.75rem;
+            color: #6B7280;
+        }
+
+        .combo-label strong {
+            display: block;
+            color: #1F2937;
+            font-size: 0.8rem;
+            margin-bottom: 2px;
+        }
+
+        /* Contrast table */
+        .contrast-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.85rem;
+        }
+
+        .contrast-table th {
+            text-align: left;
+            padding: 8px 12px;
+            background: #2a4571;
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+        }
+
+        .contrast-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .contrast-pass { color: #059669; font-weight: 600; }
+        .contrast-fail { color: #DC2626; font-weight: 600; }
+
+        /* CSS Variables */
+        .css-vars {
+            background: #1F2937;
+            color: #E5E7EB;
+            padding: 24px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            line-height: 1.8;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .css-vars .comment { color: #6B7280; }
+        .css-vars .prop { color: #93C5FD; }
+        .css-vars .val { color: #86EFAC; }
+
+        /* Usage guide */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .usage-card {
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #E5E7EB;
+            background: #fff;
+        }
+
+        .usage-card h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #2a4571;
+        }
+
+        .usage-card ul {
+            font-size: 0.85rem;
+            color: #4B5563;
+            padding-left: 16px;
+        }
+
+        .usage-card li { margin-bottom: 4px; }
+
+        .do-card { border-left: 3px solid #10B981; }
+        .dont-card { border-left: 3px solid #EF4444; }
+
+        /* Proportion bar */
+        .proportion-bar {
+            display: flex;
+            height: 48px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 16px 0 8px;
+        }
+
+        .proportion-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .proportion-legend {
+            display: flex;
+            gap: 16px;
+            font-size: 0.75rem;
+            color: #6B7280;
+            margin-bottom: 24px;
+        }
+
+        .proportion-legend span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .brand-row { grid-template-columns: repeat(2, 1fr); }
+            .combo-grid { grid-template-columns: 1fr; }
+            .usage-grid { grid-template-columns: 1fr; }
+            .wheel-container { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>EUC Brand Palette</h1>
+    <p class="subtitle">Empower Playbook V3 — Blues, grays, and navy with minimal green accent.</p>
+
+    <!-- ========== BRAND WHEEL ========== -->
+    <h2>Brand Wheel</h2>
+    <p style="font-size:0.9rem; color:#6B7280;">The green accent occupies ~4% of the wheel — reflecting how sparingly it should appear in the playbook.</p>
+
+    <div class="wheel-container">
+        <div class="wheel">
+            <div class="wheel-ring wheel-ring-outer"></div>
+            <div class="wheel-ring wheel-ring-mid"></div>
+            <div class="wheel-ring wheel-ring-inner"></div>
+            <div class="wheel-center">EUC<br>Brand</div>
+        </div>
+    </div>
+
+    <!-- ========== PRIMARY COLORS ========== -->
+    <h2>Core Palette</h2>
+
+    <div class="brand-row">
+        <div class="brand-swatch">
+            <div class="color-block" style="background:#46729d;">
+                <span style="color:rgba(255,255,255,0.5); font-size:0.7rem;">PRIMARY</span>
+            </div>
+            <div class="color-info">
+                <div class="color-name">Empower Blue</div>
+                <div class="color-hex" onclick="navigator.clipboard.writeText('#46729d')">#46729d</div>
+                <div class="color-role">Headers, links, primary actions</div>
+            </div>
+        </div>
+
+        <div class="brand-swatch">
+            <div class="color-block" style="background:#2a4571;">
+                <span style="color:rgba(255,255,255,0.5); font-size:0.7rem;">DARK</span>
+            </div>
+            <div class="color-info">
+                <div class="color-name">Deep Navy</div>
+                <div class="color-hex" onclick="navigator.clipboard.writeText('#2a4571')">#2a4571</div>
+                <div class="color-role">Headings, dark backgrounds, emphasis</div>
+            </div>
+        </div>
+
+        <div class="brand-swatch">
+            <div class="color-block" style="background:#545454;">
+                <span style="color:rgba(255,255,255,0.5); font-size:0.7rem;">NEUTRAL</span>
+            </div>
+            <div class="color-info">
+                <div class="color-name">Charcoal</div>
+                <div class="color-hex" onclick="navigator.clipboard.writeText('#545454')">#545454</div>
+                <div class="color-role">Body text, secondary elements</div>
+            </div>
+        </div>
+
+        <div class="brand-swatch">
+            <div class="color-block" style="background:#99B83C;">
+                <span style="color:rgba(255,255,255,0.8); font-size:0.7rem;">ACCENT</span>
+            </div>
+            <div class="color-info">
+                <div class="color-name">Empower Green</div>
+                <div class="color-hex" onclick="navigator.clipboard.writeText('#99B83C')">#99B83C</div>
+                <div class="color-role">Accent only — stats, success, sparingly</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proportion -->
+    <h3>Usage Proportions</h3>
+    <div class="proportion-bar">
+        <div class="proportion-segment" style="flex:40; background:#46729d; color:rgba(255,255,255,0.8);">40%</div>
+        <div class="proportion-segment" style="flex:25; background:#2a4571; color:rgba(255,255,255,0.8);">25%</div>
+        <div class="proportion-segment" style="flex:30; background:#545454; color:rgba(255,255,255,0.7);">30%</div>
+        <div class="proportion-segment" style="flex:5; background:#99B83C; color:rgba(255,255,255,0.8);">5%</div>
+    </div>
+    <div class="proportion-legend">
+        <span><span class="legend-dot" style="background:#46729d;"></span>Empower Blue — primary UI</span>
+        <span><span class="legend-dot" style="background:#2a4571;"></span>Deep Navy — headings &amp; dark</span>
+        <span><span class="legend-dot" style="background:#545454;"></span>Charcoal — text &amp; neutrals</span>
+        <span><span class="legend-dot" style="background:#99B83C;"></span>Green — accent only</span>
+    </div>
+
+    <!-- ========== TINT/SHADE SCALES ========== -->
+    <h2>Color Scales</h2>
+
+    <h3>Empower Blue Scale</h3>
+    <div class="scale-row">
+        <div class="scale-swatch" style="background:#EDF2F7;"><span class="step" style="color:#2a4571;">50</span><span class="hex" style="color:#2a4571;">#EDF2F7</span></div>
+        <div class="scale-swatch" style="background:#D4E0ED;"><span class="step" style="color:#2a4571;">100</span><span class="hex" style="color:#2a4571;">#D4E0ED</span></div>
+        <div class="scale-swatch" style="background:#A9C1DA;"><span class="step" style="color:#2a4571;">200</span><span class="hex" style="color:#2a4571;">#A9C1DA</span></div>
+        <div class="scale-swatch" style="background:#7EA2C7;"><span class="step" style="color:#fff;">300</span><span class="hex" style="color:#fff;">#7EA2C7</span></div>
+        <div class="scale-swatch" style="background:#5F89B2;"><span class="step" style="color:#fff;">400</span><span class="hex" style="color:#fff;">#5F89B2</span></div>
+        <div class="scale-swatch" style="background:#46729d;"><span class="step" style="color:#fff;">500</span><span class="hex" style="color:#fff;">#46729d</span></div>
+        <div class="scale-swatch" style="background:#3B6189;"><span class="step" style="color:#fff;">600</span><span class="hex" style="color:#fff;">#3B6189</span></div>
+        <div class="scale-swatch" style="background:#305074;"><span class="step" style="color:#fff;">700</span><span class="hex" style="color:#fff;">#305074</span></div>
+        <div class="scale-swatch" style="background:#253F5F;"><span class="step" style="color:#fff;">800</span><span class="hex" style="color:#fff;">#253F5F</span></div>
+        <div class="scale-swatch" style="background:#1A2E4A;"><span class="step" style="color:#fff;">900</span><span class="hex" style="color:#fff;">#1A2E4A</span></div>
+    </div>
+
+    <h3>Deep Navy Scale</h3>
+    <div class="scale-row">
+        <div class="scale-swatch" style="background:#E8ECF2;"><span class="step" style="color:#2a4571;">50</span><span class="hex" style="color:#2a4571;">#E8ECF2</span></div>
+        <div class="scale-swatch" style="background:#C5CFE0;"><span class="step" style="color:#2a4571;">100</span><span class="hex" style="color:#2a4571;">#C5CFE0</span></div>
+        <div class="scale-swatch" style="background:#8FA3BE;"><span class="step" style="color:#2a4571;">200</span><span class="hex" style="color:#2a4571;">#8FA3BE</span></div>
+        <div class="scale-swatch" style="background:#5A779C;"><span class="step" style="color:#fff;">300</span><span class="hex" style="color:#fff;">#5A779C</span></div>
+        <div class="scale-swatch" style="background:#3D5C87;"><span class="step" style="color:#fff;">400</span><span class="hex" style="color:#fff;">#3D5C87</span></div>
+        <div class="scale-swatch" style="background:#2a4571;"><span class="step" style="color:#fff;">500</span><span class="hex" style="color:#fff;">#2a4571</span></div>
+        <div class="scale-swatch" style="background:#223A61;"><span class="step" style="color:#fff;">600</span><span class="hex" style="color:#fff;">#223A61</span></div>
+        <div class="scale-swatch" style="background:#1B2F50;"><span class="step" style="color:#fff;">700</span><span class="hex" style="color:#fff;">#1B2F50</span></div>
+        <div class="scale-swatch" style="background:#142440;"><span class="step" style="color:#fff;">800</span><span class="hex" style="color:#fff;">#142440</span></div>
+        <div class="scale-swatch" style="background:#0D1930;"><span class="step" style="color:#fff;">900</span><span class="hex" style="color:#fff;">#0D1930</span></div>
+    </div>
+
+    <h3>Charcoal / Neutral Scale</h3>
+    <div class="scale-row">
+        <div class="scale-swatch" style="background:#F5F5F5;"><span class="step" style="color:#545454;">50</span><span class="hex" style="color:#545454;">#F5F5F5</span></div>
+        <div class="scale-swatch" style="background:#E8E8E8;"><span class="step" style="color:#545454;">100</span><span class="hex" style="color:#545454;">#E8E8E8</span></div>
+        <div class="scale-swatch" style="background:#D1D1D1;"><span class="step" style="color:#545454;">200</span><span class="hex" style="color:#545454;">#D1D1D1</span></div>
+        <div class="scale-swatch" style="background:#B0B0B0;"><span class="step" style="color:#545454;">300</span><span class="hex" style="color:#545454;">#B0B0B0</span></div>
+        <div class="scale-swatch" style="background:#8A8A8A;"><span class="step" style="color:#fff;">400</span><span class="hex" style="color:#fff;">#8A8A8A</span></div>
+        <div class="scale-swatch" style="background:#545454;"><span class="step" style="color:#fff;">500</span><span class="hex" style="color:#fff;">#545454</span></div>
+        <div class="scale-swatch" style="background:#454545;"><span class="step" style="color:#fff;">600</span><span class="hex" style="color:#fff;">#454545</span></div>
+        <div class="scale-swatch" style="background:#363636;"><span class="step" style="color:#fff;">700</span><span class="hex" style="color:#fff;">#363636</span></div>
+        <div class="scale-swatch" style="background:#272727;"><span class="step" style="color:#fff;">800</span><span class="hex" style="color:#fff;">#272727</span></div>
+        <div class="scale-swatch" style="background:#1A1A1A;"><span class="step" style="color:#fff;">900</span><span class="hex" style="color:#fff;">#1A1A1A</span></div>
+    </div>
+
+    <h3>Empower Green Scale <span style="font-weight:400; text-transform:none; letter-spacing:0; color:#9CA3AF;">(accent only)</span></h3>
+    <div class="scale-row">
+        <div class="scale-swatch" style="background:#F4F8E8;"><span class="step" style="color:#545454;">50</span><span class="hex" style="color:#545454;">#F4F8E8</span></div>
+        <div class="scale-swatch" style="background:#E3EDCA;"><span class="step" style="color:#545454;">100</span><span class="hex" style="color:#545454;">#E3EDCA</span></div>
+        <div class="scale-swatch" style="background:#D0E09F;"><span class="step" style="color:#545454;">200</span><span class="hex" style="color:#545454;">#D0E09F</span></div>
+        <div class="scale-swatch" style="background:#BCDA74;"><span class="step" style="color:#545454;">300</span><span class="hex" style="color:#545454;">#BCDA74</span></div>
+        <div class="scale-swatch" style="background:#A9C956;"><span class="step" style="color:#fff;">400</span><span class="hex" style="color:#fff;">#A9C956</span></div>
+        <div class="scale-swatch" style="background:#99B83C;"><span class="step" style="color:#fff;">500</span><span class="hex" style="color:#fff;">#99B83C</span></div>
+        <div class="scale-swatch" style="background:#829D33;"><span class="step" style="color:#fff;">600</span><span class="hex" style="color:#fff;">#829D33</span></div>
+        <div class="scale-swatch" style="background:#6B822A;"><span class="step" style="color:#fff;">700</span><span class="hex" style="color:#fff;">#6B822A</span></div>
+        <div class="scale-swatch" style="background:#546721;"><span class="step" style="color:#fff;">800</span><span class="hex" style="color:#fff;">#546721</span></div>
+        <div class="scale-swatch" style="background:#3D4C18;"><span class="step" style="color:#fff;">900</span><span class="hex" style="color:#fff;">#3D4C18</span></div>
+    </div>
+
+    <!-- ========== COMBINATIONS ========== -->
+    <h2>Recommended Combinations</h2>
+
+    <div class="combo-grid">
+        <div class="combo-card">
+            <div class="combo-preview" style="background:#2a4571; color:#fff; display:flex; flex-direction:column; justify-content:center; padding:24px;">
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:8px;">Chapter Header</div>
+                <div style="font-size:0.85rem; opacity:0.75;">White text on Deep Navy</div>
+            </div>
+            <div class="combo-label">
+                <strong>Dark Header</strong>
+                Navy bg + white text. Use for chapter headers and hero sections.
+            </div>
+        </div>
+
+        <div class="combo-card">
+            <div class="combo-preview" style="background:#EDF2F7; display:flex; flex-direction:column; justify-content:center; padding:24px;">
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.1rem; font-weight:600; color:#2a4571; margin-bottom:8px;">Research Finding</div>
+                <div style="font-size:0.85rem; color:#545454;">Evidence from the field supports this approach across multiple contexts.</div>
+            </div>
+            <div class="combo-label">
+                <strong>Blue Callout</strong>
+                Blue-50 bg + navy text. For evidence and research findings.
+            </div>
+        </div>
+
+        <div class="combo-card">
+            <div class="combo-preview" style="background:#fff; border-left:3px solid #46729d; display:flex; flex-direction:column; justify-content:center; padding:24px;">
+                <div style="font-size:1rem; font-style:italic; color:#363636;">"This changed how we think about workforce development entirely."</div>
+                <div style="font-size:0.8rem; color:#8A8A8A; margin-top:8px;">— Program Director</div>
+            </div>
+            <div class="combo-label">
+                <strong>Blockquote</strong>
+                Blue left border + white bg. For practitioner quotes.
+            </div>
+        </div>
+
+        <div class="combo-card">
+            <div class="combo-preview" style="background:#2a4571; display:flex; align-items:center; justify-content:center; gap:32px; padding:24px;">
+                <div style="text-align:center;">
+                    <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.8rem; font-weight:700; color:#FFFFFF;">73%</div>
+                    <div style="font-size:0.75rem; color:rgba(255,255,255,0.6);">Completion</div>
+                </div>
+                <div style="text-align:center;">
+                    <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.8rem; font-weight:700; color:#FFFFFF;">$4.2M</div>
+                    <div style="font-size:0.75rem; color:rgba(255,255,255,0.6);">Value</div>
+                </div>
+            </div>
+            <div class="combo-label">
+                <strong>Data Box</strong>
+                Navy bg + white stat numbers. Clean and high contrast.
+            </div>
+        </div>
+
+        <div class="combo-card">
+            <div class="combo-preview" style="background:#fff; border:2px solid #2a4571; border-radius:6px; display:flex; flex-direction:column; justify-content:center; padding:24px;">
+                <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#2a4571; margin-bottom:8px;">Key Takeaway</div>
+                <div style="font-size:0.85rem; color:#545454; margin-bottom:8px;">The main insight summarized.</div>
+                <div style="font-size:0.9rem; font-weight:600; color:#2a4571; background:#F5F5F5; padding:12px; border-radius:4px;">The one sentence to remember.</div>
+            </div>
+            <div class="combo-label">
+                <strong>Key Takeaway</strong>
+                Navy border + white bg. Clean and authoritative.
+            </div>
+        </div>
+
+        <div class="combo-card">
+            <div class="combo-preview" style="background:#F9FAFB; display:flex; flex-direction:column; justify-content:center; padding:24px;">
+                <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; background:#fff; border:1px solid #E8E8E8; border-radius:6px; margin-bottom:8px;">
+                    <span style="display:flex; align-items:center; justify-content:center; width:28px; height:28px; background:#EDF2F7; border-radius:4px; color:#46729d; font-size:0.8rem; font-weight:700;">4</span>
+                    <span style="font-size:0.85rem; color:#545454;">The Empower Model</span>
+                    <span style="font-size:0.7rem; color:#B0B0B0; margin-left:auto;">15 min</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; background:#EDF2F7; border:1px solid #D4E0ED; border-radius:6px;">
+                    <span style="display:flex; align-items:center; justify-content:center; width:28px; height:28px; background:#46729d; border-radius:4px; color:#fff; font-size:0.8rem; font-weight:700;">5</span>
+                    <span style="font-size:0.85rem; color:#2a4571; font-weight:500;">Two-Gen Approach</span>
+                    <span style="font-size:0.7rem; color:#8A8A8A; margin-left:auto;">12 min</span>
+                </div>
+            </div>
+            <div class="combo-label">
+                <strong>Navigation</strong>
+                Blue-50 active state + navy number badge. No green in nav.
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CONTRAST ========== -->
+    <h2>WCAG Contrast Check</h2>
+
+    <table class="contrast-table">
+        <thead>
+            <tr><th>Combination</th><th>Ratio</th><th>AA Normal</th><th>AA Large</th><th>AAA</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>White on Navy (#2a4571)</td><td>10.2:1</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td></tr>
+            <tr><td>White on Blue (#46729d)</td><td>4.6:1</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td><td class="contrast-fail">Fail</td></tr>
+            <tr><td>Navy on White</td><td>10.2:1</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td></tr>
+            <tr><td>Charcoal (#545454) on White</td><td>7.0:1</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td></tr>
+            <tr><td>Blue on Blue-50 (#EDF2F7)</td><td>3.9:1</td><td class="contrast-fail">Fail</td><td class="contrast-pass">Pass</td><td class="contrast-fail">Fail</td></tr>
+            <tr><td>Navy on Blue-50 (#EDF2F7)</td><td>8.7:1</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td><td class="contrast-pass">Pass</td></tr>
+            <tr><td>White on Green (#99B83C)</td><td>2.4:1</td><td class="contrast-fail">Fail</td><td class="contrast-fail">Fail</td><td class="contrast-fail">Fail</td></tr>
+            <tr><td>Navy on Green (#99B83C)</td><td>4.2:1</td><td class="contrast-fail">Fail</td><td class="contrast-pass">Pass</td><td class="contrast-fail">Fail</td></tr>
+            <tr><td>Green on Navy (#2a4571)</td><td>4.2:1</td><td class="contrast-fail">Fail</td><td class="contrast-pass">Pass</td><td class="contrast-fail">Fail</td></tr>
+        </tbody>
+    </table>
+
+    <p style="font-size:0.85rem; color:#6B7280;">Green fails most contrast tests — this is why we use it only for large decorative elements (stat numbers on dark backgrounds), never for small text or interactive elements.</p>
+
+    <!-- ========== USAGE GUIDE ========== -->
+    <h2>When to Use Each Color</h2>
+
+    <div class="usage-grid">
+        <div class="usage-card do-card">
+            <h4>Do</h4>
+            <ul>
+                <li>Use <strong>Navy</strong> for headings, key takeaway borders, dark backgrounds</li>
+                <li>Use <strong>Blue</strong> for links, active states, section numbers, callout borders</li>
+                <li>Use <strong>Charcoal</strong> for body text, secondary labels, neutral borders</li>
+                <li>Use <strong>Green</strong> only for stat numbers in data boxes and small progress indicators</li>
+                <li>Use blue/navy tints (50-100) for subtle backgrounds</li>
+            </ul>
+        </div>
+        <div class="usage-card dont-card">
+            <h4>Don't</h4>
+            <ul>
+                <li>Don't use green for text, buttons, links, or navigation</li>
+                <li>Don't use green backgrounds (white text on green fails WCAG)</li>
+                <li>Don't use gradients on chapter headers</li>
+                <li>Don't use more than 2 colors in any single component</li>
+                <li>Don't tint body content backgrounds — keep them white or gray-50</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== CSS VARIABLES ========== -->
+    <h2>CSS Variables</h2>
+
+    <div class="css-vars">
+<span class="comment">/* Brand Colors */</span>
+<span class="prop">--color-blue</span>: <span class="val">#46729d</span>;
+<span class="prop">--color-navy</span>: <span class="val">#2a4571</span>;
+<span class="prop">--color-charcoal</span>: <span class="val">#545454</span>;
+<span class="prop">--color-green</span>: <span class="val">#99B83C</span>;
+
+<span class="comment">/* Blue Scale */</span>
+<span class="prop">--blue-50</span>: <span class="val">#EDF2F7</span>;   <span class="prop">--blue-100</span>: <span class="val">#D4E0ED</span>;
+<span class="prop">--blue-200</span>: <span class="val">#A9C1DA</span>;  <span class="prop">--blue-300</span>: <span class="val">#7EA2C7</span>;
+<span class="prop">--blue-400</span>: <span class="val">#5F89B2</span>;  <span class="prop">--blue-500</span>: <span class="val">#46729d</span>;
+<span class="prop">--blue-600</span>: <span class="val">#3B6189</span>;  <span class="prop">--blue-700</span>: <span class="val">#305074</span>;
+
+<span class="comment">/* Navy Scale */</span>
+<span class="prop">--navy-50</span>: <span class="val">#E8ECF2</span>;   <span class="prop">--navy-100</span>: <span class="val">#C5CFE0</span>;
+<span class="prop">--navy-500</span>: <span class="val">#2a4571</span>;  <span class="prop">--navy-700</span>: <span class="val">#1B2F50</span>;
+<span class="prop">--navy-900</span>: <span class="val">#0D1930</span>;
+
+<span class="comment">/* Neutral Scale */</span>
+<span class="prop">--gray-50</span>: <span class="val">#F5F5F5</span>;   <span class="prop">--gray-100</span>: <span class="val">#E8E8E8</span>;
+<span class="prop">--gray-200</span>: <span class="val">#D1D1D1</span>;  <span class="prop">--gray-400</span>: <span class="val">#8A8A8A</span>;
+<span class="prop">--gray-500</span>: <span class="val">#545454</span>;  <span class="prop">--gray-700</span>: <span class="val">#363636</span>;
+
+<span class="comment">/* Green (accent only) */</span>
+<span class="prop">--green-50</span>: <span class="val">#F4F8E8</span>;
+<span class="prop">--green-500</span>: <span class="val">#99B83C</span>;
+<span class="prop">--green-700</span>: <span class="val">#6B822A</span>;
+    </div>
+
+</div>
+
+<script>
+// Click-to-copy on hex values
+document.querySelectorAll('.color-hex').forEach(el => {
+    el.addEventListener('click', function() {
+        const hex = this.textContent;
+        navigator.clipboard.writeText(hex).then(() => {
+            const original = this.textContent;
+            this.textContent = 'Copied!';
+            setTimeout(() => this.textContent = original, 1000);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
