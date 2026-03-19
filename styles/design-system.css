@@ -1147,3 +1147,15 @@ hr {
     scroll-behavior: auto !important;
   }
 }
+
+/* --- Source/Citation Links --- */
+.source-link {
+  color: var(--blue-500);
+  text-decoration: underline;
+  text-decoration-color: var(--green-500);
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+.source-link:hover {
+  color: var(--green-600);
+}
