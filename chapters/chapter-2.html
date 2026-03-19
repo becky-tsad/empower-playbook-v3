@@ -263,36 +263,59 @@
 
         <h3>The Benefits Cliff in Numbers</h3>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Scenario</th>
-                    <th>Wages</th>
-                    <th>Benefits</th>
-                    <th>Total Resources</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Before raise ($12.80/hr)</td>
-                    <td>$26,600</td>
-                    <td>$12,800</td>
-                    <td>$39,424</td>
-                </tr>
-                <tr>
-                    <td>After $2/hr raise (childcare lost)</td>
-                    <td>$30,800</td>
-                    <td>$6,000</td>
-                    <td>$36,784</td>
-                </tr>
-                <tr>
-                    <td>More hours (SNAP lost)</td>
-                    <td>$32,800</td>
-                    <td>$4,000</td>
-                    <td>$36,800</td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4); margin: var(--space-6) 0;">
+            <!-- Before raise -->
+            <div style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); border: 2px solid #10b981; border-radius: var(--radius-md); padding: var(--space-5); position: relative;">
+                <div style="font-family: var(--font-heading); font-weight: 700; font-size: var(--text-sm); color: #065f46; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2);">Before the Raise — $12.80/hr</div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); text-align: center;">
+                    <div>
+                        <div style="font-size: var(--text-xs); color: #065f46; font-weight: 600;">Wages</div>
+                        <div style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 800; color: #065f46;">$26,600</div>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-xs); color: #065f46; font-weight: 600;">Benefits</div>
+                        <div style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 800; color: #065f46;">$12,800</div>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-xs); color: #065f46; font-weight: 600;">Total Resources</div>
+                        <div style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 800; color: #065f46;">$39,424</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrow down -->
+            <div style="text-align: center; font-size: var(--text-2xl); color: var(--text-muted);">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                <div style="font-family: var(--font-heading); font-size: var(--text-sm); color: #ef4444; font-weight: 700;">She gets a $2/hr raise...</div>
+            </div>
+
+            <!-- After raise - childcare lost -->
+            <div style="background: linear-gradient(135deg, #fef2f2, #fecaca); border: 2px solid #ef4444; border-radius: var(--radius-md); padding: var(--space-5);">
+                <div style="font-family: var(--font-heading); font-weight: 700; font-size: var(--text-sm); color: #991b1b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2);">After the Raise — $14.80/hr (childcare subsidy lost)</div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); text-align: center;">
+                    <div>
+                        <div style="font-size: var(--text-xs); color: #991b1b; font-weight: 600;">Wages</div>
+                        <div style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 800; color: #991b1b;">$30,800</div>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-xs); color: #991b1b; font-weight: 600;">Benefits</div>
+                        <div style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 800; color: #991b1b;">$6,000</div>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-xs); color: #991b1b; font-weight: 600;">Total Resources</div>
+                        <div style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 800; color: #991b1b;">$36,784</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Net loss callout -->
+            <div style="background: #1e1e2e; border-radius: var(--radius-md); padding: var(--space-5); text-align: center;">
+                <div style="font-family: var(--font-heading); font-size: var(--text-sm); color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">Net Result</div>
+                <div style="font-family: var(--font-heading); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; color: #ef4444; margin: var(--space-2) 0;">-$2,640/year</div>
+                <div style="font-size: var(--text-sm); color: #cbd5e1;">She earned <strong style="color: #10b981;">$4,160 more</strong> in wages but lost <strong style="color: #ef4444;">$6,800</strong> in childcare assistance.</div>
+                <div style="font-size: var(--text-sm); color: #cbd5e1; margin-top: var(--space-2);">A $2/hr "raise" made her family <strong style="color: #ef4444;">poorer</strong>.</div>
+            </div>
+        </div>
 
         <p>Sarah needs to nearly double her income — from $26K to $54K+ — to get back to where she started. That $19,000+ gap is the wall. That's why families stay stuck. Traditional poverty programs never address this. Benefits cliff navigation does.</p>
 

@@ -968,6 +968,96 @@ hr {
   .mobile-menu-btn:hover {
     background: var(--gray-100);
   }
+
+  /* --- Flex wrap fixes --- */
+  .chapter-meta {
+    flex-wrap: wrap;
+  }
+
+  .chapter-badges {
+    flex-wrap: wrap;
+  }
+
+  .footer-logos {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  /* --- Chapter navigation stacks vertically --- */
+  .chapter-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chapter-nav a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* --- Tables scroll horizontally --- */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  thead, tbody, tr, th, td {
+    white-space: normal;
+  }
+
+  /* Keep table readable with minimum column widths */
+  th, td {
+    min-width: 100px;
+  }
+
+  /* --- Prevent main content horizontal overflow --- */
+  .main-content {
+    overflow-x: hidden;
+  }
+
+  /* --- Data number size reduction to prevent overflow --- */
+  .data-number {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* Extra-small screens (narrow phones) */
+@media (max-width: 480px) {
+  .main-content {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .chapter-title {
+    font-size: var(--text-2xl);
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-10);
+  }
+
+  /* Data grid stacks to single column on small phones */
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-box {
+    padding: var(--space-5);
+  }
+
+  .data-number {
+    font-size: var(--text-xl);
+  }
+
+  /* Callouts and key takeaway need reduced padding */
+  .callout {
+    padding: var(--space-4);
+  }
+
+  .key-takeaway {
+    padding: var(--space-5);
+  }
 }
 
 /* Desktop: hide mobile elements */
